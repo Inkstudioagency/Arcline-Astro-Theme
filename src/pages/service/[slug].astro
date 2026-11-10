@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceDetailsHero from '../../components/sections/service/ServiceDetailsHero.astro';
+import ServiceDetailsNav from '../../components/sections/service/ServiceDetailsNav.astro';
+import ServiceDetailsOverview from '../../components/sections/service/ServiceDetailsOverview.astro';
+import ServiceDetailsFacts from '../../components/sections/service/ServiceDetailsFacts.astro';
+import ServiceDetailsChallenges from '../../components/sections/service/ServiceDetailsChallenges.astro';
+import ServiceDetailsApproach from '../../components/sections/service/ServiceDetailsApproach.astro';
+import ServiceDetailsBenefits from '../../components/sections/service/ServiceDetailsBenefits.astro';
+import ServiceDetailsCases from '../../components/sections/service/ServiceDetailsCases.astro';
+import ServiceDetailsFaq from '../../components/sections/service/ServiceDetailsFaq.astro';
+import Cta from '../../components/sections/Cta.astro';
+import type { Service } from '../../lib/cms';
+import { getServices, mediaSrc } from '../../lib/cms';
+
+export const getStaticPaths = (async () => {
+  const entries = await getServices();
+  return entries.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.seo?.metaTitle || `${item.title} | Arcline`} description={item.seo?.metaDescription || item.summary || undefined} image={mediaSrc(item.heroPhoto)} type="website" wfPage="6ae01abdb145c25589cf755f">
+  <ServiceDetailsHero item={item} />
+  <ServiceDetailsNav />
+  <ServiceDetailsOverview item={item} />
+  <ServiceDetailsFacts item={item} />
+  <ServiceDetailsChallenges item={item} />
+  <ServiceDetailsApproach />
+  <ServiceDetailsBenefits />
+  <ServiceDetailsCases />
+  <ServiceDetailsFaq />
+  <Cta />
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import type { BlogPost } from '../../lib/cms';
+import { blogUrl, formatDate, mediaAlt, mediaSrc } from '../../lib/cms';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  item: BlogPost;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="home-v2-insights-card">
+                            <a href={blogUrl(item)} class="home-v2-insights-card-image-link"><img src={mediaSrc(item.mainImage)} loading="lazy" alt={mediaAlt(item.mainImage)} class="home-v2-insights-card-image" /></a>
+                            <div class="home-v2-insights-card-body">
+                              <div class="home-v2-insights-card-top">
+                                <div class="blog-card-meta">
+                                  <div class="blog-card-tag">{item.category}</div>
+                                  <div class="blog-card-meta-text">·</div>
+                                  <div class="blog-card-meta-text">{formatDate(item.publishedDate)}</div>
+                                  <div class="blog-card-meta-text">·</div>
+                                  <div class="blog-card-meta-text">{item.readTime}</div>
+                                </div>
+                                <a href={blogUrl(item)} class="blog-card-title-block w-inline-block">
+                                  <h3 class="blog-card-title">{item.title}</h3>
+                                </a>
+                              </div>
+                              <Button href={blogUrl(item)} variant="outline-light">Read More</Button>
+                            </div>
+                          </div>

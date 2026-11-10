@@ -1,0 +1,37 @@
+---
+import LinkButton from '../../ui/LinkButton.astro';
+import BlogCardHomeV3 from '../../cards/BlogCardHomeV3.astro';
+import { getBlogPosts } from '../../../lib/cms';
+
+const posts = await getBlogPosts();
+const list7 = posts.slice(0, 3);
+---
+
+<section class="section_home-v3-insights">
+          <div class="section-gap">
+            <div class="container-main">
+              <div class="home-insights-wrapper">
+                <div class="section-header">
+                  <div class="section-header-title-block">
+                    <div class="section-eyebrow">
+                      <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div class="section-eyebrow-label">Insights</div>
+                    </div>
+                    <h2 class="heading-style-2 section-header-heading">Insights for Better Business <span class="heading-accent">Decisions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none" fill="none" viewBox="0 0 306 16" height="100%" width="100%" class="heading-accent-line is-pos-insights heading-accent-line">
+                          <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M1.42285 7.96246C96.6187 6.33255 202.147 3.51953 297.986 3.51953"></path>
+                          <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M109.064 12.4052C174.391 12.0302 239.535 10.753 304.576 9.7395"></path>
+                        </svg></span></h2>
+                  </div>
+                  <div class="section-header-summary-block home-insights-action">
+                    <LinkButton href="/blog-v3">All Insights</LinkButton>
+                  </div>
+                </div>
+                <div class="home-insights-list-wrapper w-dyn-list">{list7.length > 0 ? (<div role="list" class="home-insights-list is-v3 w-dyn-items">{list7.map((item) => (<div role="listitem" class="home-insights-item w-dyn-item"><BlogCardHomeV3 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>)}</div>
+              </div>
+            </div>
+          </div>
+        </section>

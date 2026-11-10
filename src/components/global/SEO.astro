@@ -1,0 +1,44 @@
+---
+import { site } from '../../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Overrides for Open Graph / Twitter (default to title/description). */
+  ogTitle?: string;
+  ogDescription?: string;
+  /** Absolute URL or root-relative path. */
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title = site.defaultTitle,
+  description = site.defaultDescription,
+  ogTitle = title,
+  ogDescription = description,
+  image = site.ogImage,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const base = Astro.site ?? site.url;
+const canonical = new URL(Astro.url.pathname, base).toString();
+const imageUrl = new URL(image, base).toString();
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={site.name} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={ogDescription} />
+<meta name="twitter:image" content={imageUrl} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}

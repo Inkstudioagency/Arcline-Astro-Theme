@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_quotes",
+  "info": {
+    "displayName": "Quote",
+    "icon": "quote",
+    "description": "Client quote with its author."
+  },
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "authorRole": {
+      "type": "string"
+    },
+    "authorPhoto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,137 @@
+---
+import Button from '../../ui/Button.astro';
+import type { BlogPost } from '../../../lib/cms';
+import { mediaAlt, mediaSrc } from '../../../lib/cms';
+
+interface Props {
+  item: BlogPost;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_blog-details-content">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="blog-details-content-grid">
+              <div class="blog-details-article">
+                <div class="section-eyebrow">
+                  <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                    </svg></div>
+                  <div class="section-eyebrow-label">Overview</div>
+                </div>
+                <div class="blog-details-intro-group">
+                  <h2 class="blog-details-statement"><span class="blog-details-text-inline">{item.statement?.start}</span><span class="blog-details-text-inline">&nbsp;</span><span class="blog-details-accent"><span class="blog-details-text-inline">{item.statement?.accent}</span>
+                      <div class="blog-details-statement-circle w-embed"><svg width="100%" height="100%" viewBox="0 0 161 45" fill="none" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M99.958 6.48637C118.176 3.98546 135.538 4.16691 150.915 10.2553C162.799 14.9611 163.625 22.9178 149.81 29.6902C136.434 36.2375 115.45 39.2202 98.4181 41.1674C80.5005 43.2099 62.1538 44.3674 44.9074 43.8949C29.8921 43.4879 12.5195 42.0819 4.38463 36.6074C-1.2245 32.8108 0.613744 27.6049 6.41502 22.918C21.43 10.7959 54.9957 2.6657 82.1299 1.20441C103.85 0.0346967 117.192 3.98546 131.647 10.4878" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                        </svg></div>
+                    </span><span class="blog-details-text-inline">{item.statement?.end}</span></h2>
+                  <p class="blog-details-intro">{item.intro}</p>
+                </div><img src={mediaSrc(item.overviewImage)} loading="lazy" alt={mediaAlt(item.overviewImage)} class="blog-details-image" />
+                <div class="blog-details-section">
+                  <h3 class="blog-details-section-title">{item.sections[0]?.title}</h3>
+                  <p class="blog-details-intro">{item.sections[0]?.text}</p>
+                </div>
+                <div class="blog-details-stats">
+                  <div class="blog-details-stat">
+                    <div class="blog-details-stat-value">{item.stats[0]?.value}</div>
+                    <div class="blog-details-stat-label">{item.stats[0]?.label}</div>
+                  </div>
+                  <div class="blog-details-stat">
+                    <div class="blog-details-stat-value">{item.stats[1]?.value}</div>
+                    <div class="blog-details-stat-label">{item.stats[1]?.label}</div>
+                  </div>
+                  <div class="blog-details-stat">
+                    <div class="blog-details-stat-value">{item.stats[2]?.value}</div>
+                    <div class="blog-details-stat-label">{item.stats[2]?.label}</div>
+                  </div>
+                </div>
+                <div class="blog-details-section">
+                  <h3 class="blog-details-section-title">{item.sections[1]?.title}</h3>
+                  <p class="blog-details-section-text">{item.sections[1]?.text}</p>
+                </div>
+                <div class="blog-details-section">
+                  <h3 class="blog-details-section-title">{item.sections[2]?.title}</h3>
+                  <p class="blog-details-section-text">{item.sections[2]?.text}</p>
+                </div>
+                <div class="blog-details-takeaways">
+                  <h3 class="blog-details-section-title">Key takeaways</h3>
+                  <div class="blog-details-takeaway-item">
+                    <div class="blog-details-takeaway-check w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="12" fill="currentColor"></rect>
+                        <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    <div class="blog-details-takeaway-text">{item.takeaways[0]?.text}</div>
+                  </div>
+                  <div class="blog-details-takeaway-item">
+                    <div class="blog-details-takeaway-check w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="12" fill="currentColor"></rect>
+                        <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    <div class="blog-details-takeaway-text">{item.takeaways[1]?.text}</div>
+                  </div>
+                  <div class="blog-details-takeaway-item">
+                    <div class="blog-details-takeaway-check w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="12" fill="currentColor"></rect>
+                        <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    <div class="blog-details-takeaway-text">{item.takeaways[2]?.text}</div>
+                  </div>
+                  <div class="blog-details-takeaway-item">
+                    <div class="blog-details-takeaway-check w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="12" fill="currentColor"></rect>
+                        <path d="M16 9L10.5 14.5L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    <div class="blog-details-takeaway-text">{item.takeaways[3]?.text}</div>
+                  </div>
+                </div>
+                <div class="blog-details-meta-row">
+                  <div class="blog-details-tags">
+                    <div class="blog-details-tag">{item.tags[0]?.text}</div>
+                    <div class="blog-details-tag">{item.tags[1]?.text}</div>
+                    <div class="blog-details-tag">{item.tags[2]?.text}</div>
+                  </div>
+                  <div class="blog-details-share">
+                    <div class="blog-details-share-label">Share</div>
+                    <a href="https://www.linkedin.com" aria-label="Share on LinkedIn" class="blog-details-share-link">
+                      <div class="blog-details-share-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.6667 5.33333C11.7275 5.33333 12.7449 5.75476 13.4951 6.50491C14.2452 7.25505 14.6667 8.27247 14.6667 9.33333V14H12V9.33333C12 8.97971 11.8595 8.64057 11.6095 8.39052C11.3594 8.14048 11.0203 8 10.6667 8C10.313 8 9.97391 8.14048 9.72386 8.39052C9.47381 8.64057 9.33333 8.97971 9.33333 9.33333V14H6.66667V9.33333C6.66667 8.27247 7.08809 7.25505 7.83824 6.50491C8.58839 5.75476 9.6058 5.33333 10.6667 5.33333Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M4 6H1.33333V14H4V6Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M2.66667 4C3.40305 4 4 3.40305 4 2.66667C4 1.93029 3.40305 1.33333 2.66667 1.33333C1.93029 1.33333 1.33333 1.93029 1.33333 2.66667C1.33333 3.40305 1.93029 4 2.66667 4Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://x.com" aria-label="Share on X" class="blog-details-share-link">
+                      <div class="blog-details-share-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.66667 2.66667L13.3333 13.3333M13.3333 2.66667L2.66667 13.3333" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://www.facebook.com" aria-label="Share on Facebook" class="blog-details-share-link">
+                      <div class="blog-details-share-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 1.33333H10C9.11594 1.33333 8.2681 1.68452 7.64298 2.30964C7.01786 2.93477 6.66667 3.78261 6.66667 4.66667V6.66667H4.66667V9.33333H6.66667V14.6667H9.33333V9.33333H11.3333L12 6.66667H9.33333V4.66667C9.33333 4.48986 9.40357 4.32029 9.5286 4.19526C9.65362 4.07024 9.82319 4 10 4H12V1.33333Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="blog-details-author-bio"><img src={mediaSrc(item.author?.avatar)} loading="lazy" alt="" class="blog-details-author-bio-avatar" />
+                  <div class="blog-details-author-bio-text">
+                    <div class="blog-details-author-bio-label">About the author</div>
+                    <div class="blog-details-author-bio-name">{item.author?.name}</div>
+                    <p class="blog-details-author-bio-role">{item.author?.role}</p>
+                  </div>
+                </div>
+              </div>
+              <aside class="blog-details-sidebar">
+                <div class="home-faq-cta-card">
+                  <div class="home-faq-avatars"><img src="/images/arcline-faq-avatar-1.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-2.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-3.webp" loading="lazy" alt="" class="home-faq-avatar" /></div>
+                  <div class="home-faq-cta-text">
+                    <h3 class="home-faq-cta-title">Still have a question?</h3>
+                    <p class="home-faq-cta-summary">Speak directly with a partner. We reply within one business day.</p>
+                  </div>
+                  <Button href="/contact-v1">Start a Conversation</Button>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>

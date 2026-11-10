@@ -1,0 +1,78 @@
+---
+import type { Service } from '../../../lib/cms';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_service-details-challenges">
+        <div id="challenges" class="service-details-anchor"></div>
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="service-details-challenges-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 20 20" height="100%" width="100%" class="section-eyebrow-icon section-eyebrow-icon">
+                      <path fill="currentColor" d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z"></path>
+                    </svg>
+                    <div class="section-eyebrow-label">Business Challenges</div>
+                  </div>
+                  <h2 class="heading-style-2 section-header-heading">Signs It’s Time for a Reset</h2><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 45 50" height="100%" width="100%" class="section-header-doodle is-pos-signs section-header-doodle">
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M2 27C3.3557 18.4591 6.90298 10.3881 9 2"></path>
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M17.5 32C25.9926 27.1537 34.4984 22.3305 43 17.5"></path>
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M19.8228 47.1832C26.5813 47.234 33.3158 47.9922 40.048 47.9922"></path>
+                  </svg>
+                </div>
+                <div class="section-header-summary-block is-narrow">
+                  <p class="text-size-large">If any of these sound familiar, your plan has stopped guiding decisions.</p>
+                </div>
+              </div>
+              <div class="service-details-challenges-card">
+                <div class="service-details-challenge">
+                  <div class="service-details-challenge-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 56 56" aria-hidden="true" height="100%" width="100%" class="service-details-challenge-icon-svg service-details-challenge-icon-svg">
+                      <path fill-opacity="0.12" fill="currentColor" d="M32.837 43.3655C34.0576 45.1549 36.1382 46.3332 38.5 46.3332C40.8618 46.3332 42.9424 45.1549 44.163 43.3655C44.8847 42.3071 45.3056 41.0349 45.3056 39.6667C45.3056 38.2984 44.8849 37.0265 44.1632 35.9683C42.9429 34.1787 40.862 33.0001 38.5 33.0001C36.138 33.0001 34.0571 34.1787 32.8368 35.9683C32.1151 37.0265 31.6944 38.2984 31.6944 39.6667C31.6944 41.0349 32.1153 42.3071 32.837 43.3655Z"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M38.5 46.3332V49M38.5 46.3332C36.1382 46.3332 34.0576 45.1549 32.837 43.3655M38.5 46.3332C40.8618 46.3332 42.9424 45.1549 44.163 43.3655M32.837 43.3655L30.3343 45M38.5 33.0001C36.138 33.0001 34.0571 34.1787 32.8368 35.9683C32.1151 37.0265 31.6944 38.2984 31.6944 39.6667C31.6944 41.0349 32.1153 42.3071 32.837 43.3655M44.163 43.3655L46.6657 45M38.5 33.0001C40.862 33.0001 42.9429 34.1787 44.1632 35.9683C44.8849 37.0265 45.3056 38.2984 45.3056 39.6667C45.3056 41.0349 44.8847 42.3071 44.163 43.3655M38.5 33.0001V30.3333M44.1632 35.9683L46.6667 34.3334M32.8368 35.9683L30.3333 34.3334"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9.33333 7H46.6667"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9.33333 21H46.6667"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9.33333 35H21"></path>
+                    </svg></div>
+                  <div class="service-details-challenge-text">
+                    <h3 class="service-details-challenge-title">{item.challenges[0]?.title}</h3>
+                    <p class="service-details-challenge-desc">{item.challenges[0]?.text}</p>
+                  </div>
+                </div>
+                <div class="service-details-challenge">
+                  <div class="service-details-challenge-icon is-orange"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 56 56" aria-hidden="true" height="100%" width="100%" class="service-details-challenge-icon-svg service-details-challenge-icon-svg">
+                      <path fill-opacity="0.12" fill="currentColor" d="M7.33301 23H48.333V43C48.333 47.4183 44.7513 51 40.333 51H15.333C10.9147 51 7.33301 47.4183 7.33301 43V23Z"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M7 23.3333H49"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M35 14H39.6667"></path>
+                      <path stroke="currentColor" stroke-width="2" d="M49 30.3333V25.6667C49 15.7672 49 10.8174 45.9247 7.74205C42.8493 4.66667 37.8994 4.66667 28 4.66667C18.1005 4.66667 13.1508 4.66667 10.0754 7.74205C7 10.8174 7 15.7672 7 25.6667V30.3333C7 40.2327 7 45.1827 10.0754 48.258C13.1508 51.3333 18.1005 51.3333 28 51.3333C37.8994 51.3333 42.8493 51.3333 45.9247 48.258C49 45.1827 49 40.2327 49 30.3333Z"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M16.3333 32.6667H17.5614M27.3859 32.6667H28.6141M38.4386 32.6667H39.6667"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M16.3333 42H17.5614M27.3859 42H28.6141M38.4386 42H39.6667"></path>
+                    </svg></div>
+                  <div class="service-details-challenge-text">
+                    <h3 class="service-details-challenge-title">{item.challenges[1]?.title}</h3>
+                    <p class="service-details-challenge-desc">{item.challenges[1]?.text}</p>
+                  </div>
+                </div>
+                <div class="service-details-challenge">
+                  <div class="service-details-challenge-icon is-purple"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 56 56" aria-hidden="true" height="100%" width="100%" class="service-details-challenge-icon-svg service-details-challenge-icon-svg">
+                      <path fill-opacity="0.12" fill="currentColor" d="M43.166 11.7376L43.166 7L12.8327 7L12.8327 11.7376C12.8327 14.6354 14.1785 17.3686 16.4755 19.1354L27.9993 28L39.5233 19.1354C41.8201 17.3686 43.166 14.6354 43.166 11.7376Z"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M9.33333 7H46.6667"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M12.8333 7V11.7376C12.8333 14.6353 14.1792 17.3686 16.476 19.1354L28 28L39.5239 19.1354C41.8208 17.3687 43.1667 14.6353 43.1667 11.7376V7"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M12.8333 49V44.2624C12.8333 41.3646 14.1792 38.6314 16.476 36.8646L28 28L39.5239 36.8646C41.8208 38.6314 43.1667 41.3646 43.1667 44.2624V49"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M9.33333 49H46.6667"></path>
+                    </svg></div>
+                  <div class="service-details-challenge-text">
+                    <h3 class="service-details-challenge-title">{item.challenges[2]?.title}</h3>
+                    <p class="service-details-challenge-desc">{item.challenges[2]?.text}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

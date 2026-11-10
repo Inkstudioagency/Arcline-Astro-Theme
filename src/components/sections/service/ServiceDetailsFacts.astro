@@ -1,0 +1,59 @@
+---
+import type { Service } from '../../../lib/cms';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_service-details-facts">
+        <div class="container-main">
+          <div class="service-details-facts-card">
+            <div class="service-details-fact">
+              <div class="service-details-fact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" aria-hidden="true" height="100%" width="100%" class="service-details-fact-icon-svg service-details-fact-icon-svg">
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M28 16C28 22.6274 22.6274 28 16 28C9.37258 28 4 22.6274 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M16 9.3334V16.0001L20 18.6667"></path>
+                </svg></div>
+              <div class="service-details-fact-text">
+                <div class="service-details-fact-label">Typical duration</div>
+                <div class="service-details-fact-value">{item.typicalDuration}</div>
+              </div>
+            </div>
+            <div class="service-details-fact">
+              <div class="service-details-fact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" aria-hidden="true" height="100%" width="100%" class="service-details-fact-icon-svg service-details-fact-icon-svg">
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M22.6661 28V25.3333C22.6661 23.9188 22.1042 22.5623 21.104 21.5621C20.1039 20.5619 18.7473 20 17.3328 20H6.66615C5.25166 20 3.8951 20.5619 2.89491 21.5621C1.89472 22.5623 1.33281 23.9188 1.33281 25.3333V28"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M17.3339 9.33333C17.3339 12.2789 14.946 14.6667 12.0005 14.6667C9.055 14.6667 6.66719 12.2789 6.66719 9.33333C6.66719 6.38781 9.055 4 12.0005 4C14.946 4 17.3339 6.38781 17.3339 9.33333Z"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M30.6672 27.9999V25.3332C30.6663 24.1515 30.273 23.0036 29.549 22.0697C28.825 21.1357 27.8114 20.4687 26.6672 20.1732"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M21.3328 4.17324C22.48 4.46698 23.4969 5.13418 24.223 6.06966C24.9491 7.00513 25.3433 8.15568 25.3433 9.33991C25.3433 10.5241 24.9491 11.6747 24.223 12.6102C23.4969 13.5456 22.48 14.2128 21.3328 14.5066"></path>
+                </svg></div>
+              <div class="service-details-fact-text">
+                <div class="service-details-fact-label">Team</div>
+                <div class="service-details-fact-value">{item.team}</div>
+              </div>
+            </div>
+            <div class="service-details-fact">
+              <div class="service-details-fact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" aria-hidden="true" height="100%" width="100%" class="service-details-fact-icon-svg service-details-fact-icon-svg">
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M6.66667 5.3334H25.3333C26.8061 5.3334 28 6.52731 28 8.00006V24.0001C28 25.4728 26.8061 26.6667 25.3333 26.6667H6.66667C5.19391 26.6667 4 25.4728 4 24.0001V8.00006C4 6.52731 5.19391 5.3334 6.66667 5.3334Z"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M4 13.3334H28"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M10.6672 2.6666V7.99993M21.3339 2.6666V7.99993"></path>
+                </svg></div>
+              <div class="service-details-fact-text">
+                <div class="service-details-fact-label">Engagement model</div>
+                <div class="service-details-fact-value">{item.engagementModel}</div>
+              </div>
+            </div>
+            <div class="service-details-fact">
+              <div class="service-details-fact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" aria-hidden="true" height="100%" width="100%" class="service-details-fact-icon-svg service-details-fact-icon-svg">
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M28 16C28 22.6274 22.6274 28 16 28C9.37258 28 4 22.6274 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"></path>
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M21.3339 15.9999C21.3339 18.9455 18.946 21.3333 16.0005 21.3333C13.055 21.3333 10.6672 18.9455 10.6672 15.9999C10.6672 13.0544 13.055 10.6666 16.0005 10.6666C18.946 10.6666 21.3339 13.0544 21.3339 15.9999Z"></path>
+                </svg></div>
+              <div class="service-details-fact-text">
+                <div class="service-details-fact-label">Ideal for</div>
+                <div class="service-details-fact-value">{item.idealFor}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

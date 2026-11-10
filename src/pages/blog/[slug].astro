@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogDetailsHero from '../../components/sections/blog-post/BlogDetailsHero.astro';
+import BlogDetailsContent from '../../components/sections/blog-post/BlogDetailsContent.astro';
+import BlogDetailsQuote from '../../components/sections/blog-post/BlogDetailsQuote.astro';
+import BlogDetailsRelated from '../../components/sections/blog-post/BlogDetailsRelated.astro';
+import type { BlogPost } from '../../lib/cms';
+import { getBlogPosts, mediaSrc } from '../../lib/cms';
+
+export const getStaticPaths = (async () => {
+  const entries = await getBlogPosts();
+  return entries.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  item: BlogPost;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.seo?.metaTitle || `${item.title} | Arcline`} description={item.seo?.metaDescription || item.excerpt || undefined} image={mediaSrc(item.mainImage)} type="article" wfPage="6ae01b3128409370b4631bd5">
+  <BlogDetailsHero item={item} />
+  <BlogDetailsContent item={item} />
+  <BlogDetailsQuote item={item} />
+  <BlogDetailsRelated />
+</BaseLayout>

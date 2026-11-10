@@ -1,0 +1,89 @@
+---
+import Button from '../../ui/Button.astro';
+import type { Service } from '../../../lib/cms';
+import { mediaAlt, mediaSrc, pad2 } from '../../../lib/cms';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_service-details-hero">
+        <div class="about-hero-mark w-embed"><svg width="100%" height="100%" viewBox="0 0 796 796" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="arcline-service-mark-fade" x1="487.5" y1="469.5" x2="498" y2="775" gradientUnits="userSpaceOnUse">
+                <stop stop-color="currentColor" stop-opacity="0.04"></stop>
+                <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M320.355 7.64755C397.559 -7.70923 477.583 0.172485 550.308 30.296C623.033 60.4196 685.192 111.432 728.925 176.883C772.658 242.334 796 319.283 796 398H604.96C604.96 357.067 592.822 317.054 570.081 283.02C547.34 248.985 515.017 222.458 477.2 206.794C439.383 191.13 397.77 187.031 357.624 195.017C317.478 203.002 280.601 222.713 251.657 251.657C222.713 280.601 203.002 317.478 195.017 357.624C187.031 397.77 191.13 439.383 206.794 477.2C222.458 515.017 248.985 547.34 283.02 570.081C317.054 592.822 357.067 604.96 398 604.96V796C319.283 796 242.334 772.658 176.883 728.925C111.432 685.192 60.4196 623.033 30.296 550.308C0.172484 477.583 -7.70923 397.559 7.64755 320.355C23.0045 243.15 60.9101 172.233 116.571 116.571C172.233 60.9101 243.15 23.0045 320.355 7.64755ZM625.428 511.714C688.23 511.714 739.143 562.626 739.143 625.429C739.143 688.231 688.23 739.143 625.428 739.143C562.625 739.142 511.714 688.231 511.714 625.429C511.714 562.626 562.625 511.714 625.428 511.714Z" fill="url(#arcline-service-mark-fade)"></path>
+          </svg></div>
+        <div class="container-main">
+          <div class="service-details-hero-grid">
+            <div class="service-details-hero-intro">
+              <div class="blog-details-breadcrumb">
+                <a href="/" class="blog-details-crumb-link">Home</a>
+                <div class="blog-details-crumb-divider">/</div>
+                <a href="/services" class="blog-details-crumb-link">Services</a>
+                <div class="blog-details-crumb-divider">/</div>
+                <div class="blog-details-crumb-current">{item.title}</div>
+              </div>
+              <div class="section-eyebrow is-white">
+                <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                  </svg></div>
+                <div class="service-details-hero-eyebrow-text">
+                  <div class="section-eyebrow-label is-white">Service</div>
+                  <div class="section-eyebrow-label is-white">{pad2(item.number)}</div>
+                </div>
+              </div>
+              <div class="service-details-hero-heading-group">
+                <h1 class="home-hero-heading is-about"><span class="service-details-title-lead">{item.headline?.lead}</span><span class="service-details-title-lead">&nbsp;</span><span class="service-details-title-accent"><span class="">{item.headline?.accent}</span><svg viewBox="0 0 270 18" preserveAspectRatio="none" fill="none" aria-hidden="true" class="service-details-title-underline">
+                      <path d="M4 9C70 5 160 4 266 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                      <path d="M44 15C120 11 200 10 246 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                    </svg></span></h1>
+                <p class="service-details-hero-summary">{item.summary}</p>
+              </div>
+              <div class="button-row">
+                <Button href="/contact-v1">Book a Session</Button>
+                <Button href="#related-work" variant="outline">See Related Work</Button>
+              </div>
+            </div>
+            <div class="service-details-hero-media"><img src={mediaSrc(item.heroPhoto)} loading="lazy" alt={mediaAlt(item.heroPhoto)} class="service-details-hero-image" />
+              <div class="service-details-brief-card">
+                <div class="service-details-brief-header">
+                  <div class="service-details-brief-title">{item.brief?.title}</div>
+                  <div class="service-details-brief-tag">
+                    <div class="service-details-brief-dot"></div>
+                    <div class="">{item.brief?.tag}</div>
+                  </div>
+                </div>
+                <div class="service-details-brief-bars">
+                  <div class="service-details-brief-bar service-details-brief-bar-1"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-2"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-3"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-4"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-5"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-6"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-7"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-8"></div>
+                  <div class="service-details-brief-bar service-details-brief-bar-9"></div>
+                </div>
+                <div class="service-details-brief-row">
+                  <div class="service-details-brief-text">
+                    <div class="service-details-brief-label">{item.brief?.label}</div>
+                    <div class="service-details-brief-value">{item.brief?.value}</div>
+                  </div>
+                  <div class="service-details-brief-status"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true" class="service-details-brief-check">
+                      <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div class="">{item.brief?.status}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

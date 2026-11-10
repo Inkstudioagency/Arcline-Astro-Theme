@@ -1,0 +1,24 @@
+---
+import type { Service } from '../../lib/cms';
+import { mediaAlt, mediaSrc, serviceUrl } from '../../lib/cms';
+import LinkButton from '../ui/LinkButton.astro';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="home-v3-services-card">
+                              <a href={serviceUrl(item)} class="home-v3-services-card-image-link w-inline-block"><img src={mediaSrc(item.cardVisualLight)} loading="lazy" alt={mediaAlt(item.cardVisualLight)} class="home-v3-services-card-image" /></a>
+                              <div class="home-v3-services-card-content">
+                                <div class="home-v3-services-card-text">
+                                  <a href={serviceUrl(item)} class="home-v3-services-card-title-link w-inline-block">
+                                    <h3 class="home-v3-services-card-title">{item.title}</h3>
+                                  </a>
+                                  <p class="home-v3-services-card-summary">{item.summary}</p>
+                                </div>
+                                <LinkButton href={serviceUrl(item)}>Explore Services</LinkButton>
+                              </div>
+                            </div>

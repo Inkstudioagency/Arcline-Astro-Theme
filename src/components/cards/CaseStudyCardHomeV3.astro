@@ -1,0 +1,35 @@
+---
+import type { CaseStudy } from '../../lib/cms';
+import { caseStudyUrl, mediaAlt, mediaSrc } from '../../lib/cms';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  item: CaseStudy;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="home-v3-cases-card">
+                        <a href={caseStudyUrl(item)} class="home-v3-cases-card-image-link w-inline-block"><img src={mediaSrc(item.featureImage)} loading="lazy" alt={mediaAlt(item.featureImage)} class="home-v3-cases-card-image" /></a>
+                        <div aria-hidden="true" class="home-v3-cases-card-blur">
+                          <div class="home-v3-cases-card-blur-layer is-1"></div>
+                          <div class="home-v3-cases-card-blur-layer is-2"></div>
+                          <div class="home-v3-cases-card-blur-layer is-3"></div>
+                          <div class="home-v3-cases-card-blur-layer is-4"></div>
+                        </div>
+                        <div class="home-v3-cases-card-overlay">
+                          <div class="home-v3-cases-card-main">
+                            <a href={caseStudyUrl(item)} class="home-v3-cases-card-title-link w-inline-block">
+                              <h3 class="home-v3-cases-card-title">{item.title}</h3>
+                            </a>
+                            <div class="home-v3-cases-card-button">
+                              <Button href={caseStudyUrl(item)} variant="light">View Case Study</Button>
+                            </div>
+                          </div>
+                          <div class="home-v3-cases-card-metric">
+                            <div class="home-v3-cases-card-value">{item.resultValue}</div>
+                            <div class="home-v3-cases-card-label">{item.resultLabel}</div>
+                          </div>
+                        </div>
+                      </div>

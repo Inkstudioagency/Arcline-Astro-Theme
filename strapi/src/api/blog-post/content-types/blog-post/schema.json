@@ -1,0 +1,117 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "singularName": "blog-post",
+    "pluralName": "blog-posts",
+    "displayName": "Blog Post",
+    "description": "Articles: blog listings (/blog-v1, /blog-v2, /blog-v3), home pages and /blog/[slug]. Listed newest first."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Strategy",
+        "Finance",
+        "Operations",
+        "Growth",
+        "Customer Experience"
+      ],
+      "required": true,
+      "default": "Strategy"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "blogPosts"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "date",
+      "required": true
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "headline": {
+      "type": "component",
+      "component": "shared.headline",
+      "repeatable": false
+    },
+    "statement": {
+      "type": "component",
+      "component": "shared.statement",
+      "repeatable": false
+    },
+    "intro": {
+      "type": "text"
+    },
+    "sections": {
+      "type": "component",
+      "component": "shared.titled-text",
+      "repeatable": true,
+      "max": 3
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true,
+      "max": 3
+    },
+    "takeaways": {
+      "type": "component",
+      "component": "shared.text-item",
+      "repeatable": true,
+      "max": 4
+    },
+    "tags": {
+      "type": "component",
+      "component": "shared.text-item",
+      "repeatable": true,
+      "max": 3
+    },
+    "overviewImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quote": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

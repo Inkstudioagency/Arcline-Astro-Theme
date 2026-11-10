@@ -1,0 +1,57 @@
+---
+// The template's notched pill button (7 Webflow components, one per colour). The label slides up on hover and the
+// notch moves: that animation is a Webflow IX3 interaction scoped to the component, which finds the button and its
+// parts through the data-wf-component-id / data-wf-target attributes below — keep them.
+import type { HTMLAttributes } from 'astro/types';
+import { currentLink } from '../../lib/nav';
+
+export type ButtonVariant = 'primary' | 'secondary' | 'light' | 'blue' | 'dark' | 'outline' | 'outline-light';
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'class'> {
+  href: string;
+  variant?: ButtonVariant;
+  class?: string;
+}
+
+/** Webflow component id + element ids (label, hover label, notch) per variant. */
+const COMPONENTS: Record<ButtonVariant, [string, string, string, string]> = {
+  primary: ['6fe2a44d-7f6a-f098-ff12-e816651b43ee', '6fe2a44d-7f6a-f098-ff12-e816651b43f0', '6fe2a44d-7f6a-f098-ff12-e816651b43f1', '6fe2a44d-7f6a-f098-ff12-e816651b43f2'],
+  secondary: ['f7973be9-c8f7-c402-7ced-ef4bb7be4e28', 'f7973be9-c8f7-c402-7ced-ef4bb7be4e2a', 'f7973be9-c8f7-c402-7ced-ef4bb7be4e2b', 'f7973be9-c8f7-c402-7ced-ef4bb7be4e2c'],
+  light: ['dd95d031-26c6-de91-ff82-53e5b6858536', 'dd95d031-26c6-de91-ff82-53e5b6858538', 'dd95d031-26c6-de91-ff82-53e5b6858539', 'dd95d031-26c6-de91-ff82-53e5b685853a'],
+  blue: ['b4a7a985-a8d9-dcaa-9d4f-b7d08d2bdb2e', 'b4a7a985-a8d9-dcaa-9d4f-b7d08d2bdb30', 'b4a7a985-a8d9-dcaa-9d4f-b7d08d2bdb31', 'b4a7a985-a8d9-dcaa-9d4f-b7d08d2bdb32'],
+  dark: ['e733f89a-4507-6ae1-8dbd-baf348a1c5a9', 'e733f89a-4507-6ae1-8dbd-baf348a1c5ab', 'e733f89a-4507-6ae1-8dbd-baf348a1c5ac', 'e733f89a-4507-6ae1-8dbd-baf348a1c5ad'],
+  outline: ['dde18bbe-3f04-a39b-97ac-94687767522d', 'dde18bbe-3f04-a39b-97ac-94687767522f', 'dde18bbe-3f04-a39b-97ac-946877675230', 'dde18bbe-3f04-a39b-97ac-946877675231'],
+  'outline-light': ['0dc61d33-6a5a-07e4-61b5-9425cbd190b8', '0dc61d33-6a5a-07e4-61b5-9425cbd190ba', '0dc61d33-6a5a-07e4-61b5-9425cbd190bb', '0dc61d33-6a5a-07e4-61b5-9425cbd190bc'],
+};
+
+const { href, variant = 'primary', class: className, ...rest } = Astro.props;
+const [component, text, hoverText, notch] = COMPONENTS[variant];
+// Each rendered button is its own component instance (Webflow keeps an instance path next to the element id;
+// IX3 only attaches interactions to elements that have one).
+const instance = crypto.randomUUID();
+const target = (element: string) => JSON.stringify([[[component, element], [instance]]]);
+const label = await Astro.slots.render('default');
+const { isCurrent, ariaCurrent } = currentLink(Astro.url);
+---
+
+<a
+  data-wf-target={target(component)}
+  data-wf-component-id={component}
+  data-wf-variant-state="base"
+  href={href}
+  aria-current={ariaCurrent(href)}
+  class:list={['button', `is-${variant}`, className, 'w-inline-block', isCurrent(href) && 'w--current']}
+  {...rest}
+>
+  <div class="button-text-mask">
+    <div data-wf-target={target(text)} class="button-text" set:html={label} />
+    <div aria-hidden="true" data-wf-target={target(hoverText)} class="button-text is-hover" set:html={label} />
+  </div>
+  <div data-wf-target={target(notch)} class="button-notch w-embed">
+    <svg width="100%" height="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M0.294995 1.7071C-0.334969 1.07714 0.111199 0 1.0021 0H6.58789C7.14018 0 7.58789 0.447715 7.58789 1V6.58579C7.58789 7.47669 6.51075 7.92286 5.88078 7.29289L0.294995 1.7071Z"
+        fill="currentColor"></path>
+    </svg>
+  </div>
+</a>

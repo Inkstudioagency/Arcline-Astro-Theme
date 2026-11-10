@@ -1,0 +1,139 @@
+---
+// Contact form (Webflow form markup, used on the three contact pages). Submissions are sent by
+// src/scripts/forms.ts to PUBLIC_FORM_ENDPOINT; the success / error blocks are shown exactly as Webflow did.
+// The "Service Of Interest" options list the services from the CMS.
+import { site } from '../../config/site';
+import { getServices } from '../../lib/cms';
+
+interface Props {
+  /** `light`: the field style used on Contact V2. */
+  variant?: 'default' | 'light';
+}
+
+const { variant = 'default' } = Astro.props;
+const fieldVariant = variant === 'light' ? 'w-variant-8ab1cd09-3711-c76d-0bb5-d7d212ae1770' : undefined;
+const services = await getServices();
+const budgets = ['Under $25k', '$25k–$75k', '$75k–$150k', '$150k+'];
+// Submitted by src/scripts/forms.ts (JSON). The action also lets the form post without JavaScript.
+const formEndpoint = import.meta.env.PUBLIC_FORM_ENDPOINT;
+const formAction = formEndpoint || '#';
+const formMethod = formEndpoint ? 'post' : 'get';
+---
+
+<div class="contact-form-block w-form">
+  <form id="contact-form" name="wf-form-Contact-Form" data-name="Contact Form" action={formAction} method={formMethod} class="contact-form">
+    <div class="contact-form-header">
+      <h2 class="contact-form-title">Start a conversation</h2>
+      <p class="contact-form-hint">Fields marked * are required.</p>
+    </div>
+    <div class="contact-form-grid">
+      <div class="contact-form-field">
+        <label for="contact-name" class="contact-form-label">Full Name <span class="contact-form-required">*</span></label><input
+          class:list={['contact-form-input', fieldVariant, 'w-input']}
+          maxlength="256"
+          name="Full-Name"
+          data-name="Full Name"
+          placeholder=""
+          type="text"
+          id="contact-name"
+          required
+        />
+      </div>
+      <div class="contact-form-field">
+        <label for="contact-email" class="contact-form-label">Work Email <span class="contact-form-required">*</span></label><input
+          class:list={['contact-form-input', fieldVariant, 'w-input']}
+          maxlength="256"
+          name="Work-Email"
+          data-name="Work Email"
+          placeholder=""
+          type="email"
+          id="contact-email"
+          required
+        />
+      </div>
+      <div class="contact-form-field">
+        <label for="contact-company" class="contact-form-label">Company</label><input
+          class:list={['contact-form-input', fieldVariant, 'w-input']}
+          maxlength="256"
+          name="Company"
+          data-name="Company"
+          placeholder="Example text"
+          type="text"
+          id="contact-company"
+        />
+      </div>
+      <div class="contact-form-field">
+        <label for="contact-phone" class="contact-form-label">Phone</label><input
+          class:list={['contact-form-input', fieldVariant, 'w-input']}
+          maxlength="256"
+          name="Phone"
+          data-name="Phone"
+          placeholder="+1 555 010 0000"
+          type="tel"
+          id="contact-phone"
+        />
+      </div>
+      <div class="contact-form-field">
+        <label for="contact-service" class="contact-form-label">Service Of Interest</label><select
+          id="contact-service"
+          name="Service-Of-Interest"
+          data-name="Service Of Interest"
+          class:list={['contact-form-input', fieldVariant, 'is-select w-select']}
+        >
+          <option value="">Select a service</option>
+          {services.map((service) => <option value={service.title}>{service.title}</option>)}
+        </select>
+      </div>
+      <div class="contact-form-field">
+        <label for="contact-budget" class="contact-form-label">Budget Range</label><select
+          id="contact-budget"
+          name="Budget-Range"
+          data-name="Budget Range"
+          class:list={['contact-form-input', fieldVariant, 'is-select w-select']}
+        >
+          <option value="">Select a range</option>
+          {budgets.map((budget) => <option value={budget}>{budget}</option>)}
+        </select>
+      </div>
+    </div>
+    <div class="contact-form-field">
+      <label for="contact-message" class="contact-form-label">Message <span class="contact-form-required">*</span></label><textarea
+        required
+        placeholder="What are you working on, and what would a great outcome look like?"
+        maxlength="5000"
+        id="contact-message"
+        name="Message"
+        data-name="Message"
+        class:list={['contact-form-input', fieldVariant, 'is-textarea w-input']}></textarea>
+    </div><label class="w-checkbox contact-form-checkbox-field"
+      ><input type="checkbox" id="contact-consent" name="Privacy-Consent" data-name="Privacy Consent" required class="w-checkbox-input contact-form-checkbox" /><span
+        class="contact-form-consent-label w-form-label"
+        ><span>I agree to the <a href={site.privacyPolicy} class="contact-form-link">privacy policy</a>. We never share your details.</span></span
+      ></label
+    >
+    <div class="contact-form-actions">
+      <div class="contact-form-reply">
+        <div class="contact-form-reply-dot"></div>
+        <div class="contact-form-reply-text">Average reply time: Within 24 hours</div>
+      </div>
+      <div class="contact-form-submit-wrap">
+        <input type="submit" data-wait="Sending..." class="contact-form-submit w-button" value="Submit" />
+        <div class="button-notch">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 8 8" height="100%" width="100%">
+            <path
+              fill="currentColor"
+              d="M0.294897 1.7071C-0.335067 1.07714 0.111102 0 1.00201 0H6.58779C7.14008 0 7.58779 0.447715 7.58779 1V6.58579C7.58779 7.47669 6.51065 7.92286 5.88069 7.29289L0.294897 1.7071Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honeypot" />
+  </form>
+  <div class="contact-form-success w-form-done" role="status">
+    <div>Thank you! Your message is on its way. A partner will reply within one business day.</div>
+  </div>
+  <div class="contact-form-error w-form-fail" role="alert">
+    <div>Something went wrong while sending your message. Please check the required fields and try again.</div>
+  </div>
+</div>

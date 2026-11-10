@@ -1,0 +1,28 @@
+---
+import type { Service } from '../../lib/cms';
+import { mediaAlt, mediaSrc, pad2, serviceUrl } from '../../lib/cms';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="home-services-card">
+                        <div class="home-services-card-content">
+                          <div class="home-services-card-number">{pad2(item.number)}</div>
+                          <div class="home-services-card-text-block">
+                            <a href={serviceUrl(item)} class="home-services-card-title-link w-inline-block">
+                              <h3 class="home-services-card-title">{item.title}</h3><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none" fill="none" viewBox="0 0 193 16" height="100%" width="100%" class="home-services-card-underline home-services-card-underline">
+                                <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M0.897461 7.96246C60.9393 6.33255 127.498 3.51953 187.945 3.51953"></path>
+                                <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M68.7891 12.4052C109.992 12.0302 151.079 10.753 192.102 9.7395"></path>
+                              </svg>
+                            </a>
+                            <p class="home-services-card-summary">{item.summary}</p>
+                          </div>
+                          <Button href={serviceUrl(item)} variant="secondary">Explore Service</Button>
+                        </div>
+                        <a href={serviceUrl(item)} class="home-services-card-image-link w-inline-block">{item.cardAnimation ? (<div aria-label={item.cardAnimationLabel ?? undefined} role="img" class="services-card-lottie" data-animation-type="lottie" data-src={item.cardAnimation} data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0" data-loading="lazy"></div>) : item.cardVisual && (<img src={mediaSrc(item.cardVisual)} loading="lazy" alt={mediaAlt(item.cardVisual)} class="services-card-lottie" />)}</a>
+                      </div>

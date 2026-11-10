@@ -1,0 +1,87 @@
+---
+import ServiceCardHomeV2 from '../../cards/ServiceCardHomeV2.astro';
+import { getServices } from '../../../lib/cms';
+
+const services = await getServices();
+const list0 = services.slice(0, 1);
+const list1 = services.slice(1, 2);
+const list2 = services.slice(2, 3);
+const list3 = services.slice(3, 4);
+const list4 = services.slice(4, 5);
+const list5 = services.slice(5, 6);
+---
+
+<section class="section_home-v2-services">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="home-v2-services-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow is-white">
+                    <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label is-white">Services</div>
+                  </div>
+                  <div class="home-v2-services-intro">
+                    <h2 class="heading-style-2 text-color-white">From Strategy to Execution</h2>
+                    <p class="text-size-regular home-v2-services-summary">Six connected practices — engaged individually or as one integrated team, depending on where the pressure sits.</p>
+                    <div class="section-header-doodle is-white is-pos-services-v2 w-embed"><svg width="100%" height="100%" viewBox="0 0 45 50" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 27C3.3557 18.4591 6.90298 10.3881 9 2" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M17.5 32C25.9926 27.1537 34.4984 22.3305 43 17.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M19.8228 47.1832C26.5813 47.234 33.3158 47.9922 40.048 47.9922" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+              <div data-delay="4000" data-animation="slide" class="home-v2-services-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                <div class="home-v2-services-slider-mask w-slider-mask">
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list0.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list0.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list1.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list1.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list2.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list2.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list3.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list3.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list4.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list4.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-services-slide w-slide">
+                    <div class="w-dyn-list">{list5.length > 0 ? (<div role="list" class="home-v2-services-list w-dyn-items">{list5.map((item) => (<div role="listitem" class="home-v2-services-item w-dyn-item"><ServiceCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                </div>
+                <div class="home-cases-arrow is-v2-prev w-slider-arrow-left">
+                  <div class="home-cases-arrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11 18C11 18 5 13.58 5 12C5 10.42 11 6 11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </div>
+                <div class="home-cases-arrow is-v2-next w-slider-arrow-right">
+                  <div class="home-cases-arrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.5 12H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M13 18C13 18 19 13.58 19 12C19 10.42 13 6 13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </div>
+                <div class="home-cases-slider-nav w-slider-nav w-round w-num"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

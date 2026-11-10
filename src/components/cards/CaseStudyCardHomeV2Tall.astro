@@ -1,0 +1,23 @@
+---
+import type { CaseStudy } from '../../lib/cms';
+import { caseStudyUrl, mediaAlt, mediaSrc } from '../../lib/cms';
+
+interface Props {
+  item: CaseStudy;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="home-v2-cases-card">
+                          <a href={caseStudyUrl(item)} class="home-v2-cases-card-image-link is-tall"><img src={mediaSrc(item.featureImage)} loading="lazy" alt={mediaAlt(item.featureImage)} class="home-v2-cases-card-image" /></a>
+                          <div class="home-v2-cases-card-info">
+                            <a href={caseStudyUrl(item)} class="home-v2-cases-card-title-link w-inline-block">
+                              <h3 class="home-v2-cases-card-title">{item.title}</h3>
+                            </a>
+                            <div class="home-v2-cases-card-metric">
+                              <div class="home-v2-cases-card-value">{item.resultValue}</div>
+                              <div class="home-v2-cases-card-label">{item.resultLabel}</div>
+                            </div>
+                          </div>
+                        </div>

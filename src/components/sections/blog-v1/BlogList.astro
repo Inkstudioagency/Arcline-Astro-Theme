@@ -1,0 +1,97 @@
+---
+import type { Page } from 'astro';
+import BlogListCard from '../../cards/BlogListCard.astro';
+import Pagination from '../../ui/Pagination.astro';
+import type { BlogPost } from '../../../lib/cms';
+import { getBlogPosts, whereEquals } from '../../../lib/cms';
+
+interface Props {
+  page: Page<BlogPost>;
+}
+
+const { page } = Astro.props;
+
+const posts = await getBlogPosts();
+const list1 = page.data;
+const list2 = whereEquals(posts, 'category', 'Strategy');
+const list3 = whereEquals(posts, 'category', 'Finance');
+const list4 = whereEquals(posts, 'category', 'Operations');
+const list5 = whereEquals(posts, 'category', 'Growth');
+const list6 = whereEquals(posts, 'category', 'Customer Experience');
+---
+
+<section class="section_blog-list">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="blog-list-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <h2 class="heading-style-2 section-header-heading">Latest Articles</h2>
+                  <div class="section-header-doodle is-pos-latest w-embed"><svg width="100%" height="100%" viewBox="0 0 45 50" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 27C3.3557 18.4591 6.90298 10.3881 9 2" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                      <path d="M17.5 32C25.9926 27.1537 34.4984 22.3305 43 17.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                      <path d="M19.8228 47.1832C26.5813 47.234 33.3158 47.9922 40.048 47.9922" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                    </svg></div>
+                </div>
+                <div class="section-header-summary-block">
+                  <p class="text-size-regular">Browse articles, guides and briefings on strategy, operations, finance and growth, written by partners who have led the work themselves.</p>
+                </div>
+              </div>
+              <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="blog-v2-content is-blog-v1 w-tabs">
+                <div class="blog-v2-filter is-blog-v1 w-tab-menu">
+                  <a data-w-tab="Tab 1" class="blog-v2-filter-tab is-active w-inline-block w-tab-link w--current">
+                    <div>All</div>
+                  </a>
+                  <a data-w-tab="Tab 2" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Strategy</div>
+                  </a>
+                  <a data-w-tab="Tab 3" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Finance</div>
+                  </a>
+                  <a data-w-tab="Tab 4" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Operations</div>
+                  </a>
+                  <a data-w-tab="Tab 5" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Growth</div>
+                  </a>
+                  <a data-w-tab="Tab 6" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Customer Experience</div>
+                  </a>
+                </div>
+                <div class="blog-v2-panels w-tab-content">
+                  <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                    <div class="blog-list-collection w-dyn-list">{list1.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list1.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div class="blog-list-empty">No items found.</div>
+                      </div>)}<Pagination page={page} /></div>
+                  </div>
+                  <div data-w-tab="Tab 2" class="w-tab-pane">
+                    <div class="blog-list-collection w-dyn-list">{list2.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list2.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 3" class="w-tab-pane">
+                    <div class="blog-list-collection w-dyn-list">{list3.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list3.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 4" class="w-tab-pane">
+                    <div class="blog-list-collection w-dyn-list">{list4.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list4.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 5" class="w-tab-pane">
+                    <div class="blog-list-collection w-dyn-list">{list5.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list5.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 6" class="w-tab-pane">
+                    <div class="blog-list-collection w-dyn-list">{list6.length > 0 ? (<div role="list" class="blog-list-grid w-dyn-items">{list6.map((item) => (<div role="listitem" class="blog-list-item w-dyn-item"><BlogListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

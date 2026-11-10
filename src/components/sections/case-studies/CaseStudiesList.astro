@@ -1,0 +1,88 @@
+---
+import type { Page } from 'astro';
+import CaseStudyGridCard from '../../cards/CaseStudyGridCard.astro';
+import Pagination from '../../ui/Pagination.astro';
+import type { CaseStudy } from '../../../lib/cms';
+import { getCaseStudies, whereEquals } from '../../../lib/cms';
+
+interface Props {
+  page: Page<CaseStudy>;
+}
+
+const { page } = Astro.props;
+
+const caseStudies = await getCaseStudies();
+const list5 = page.data;
+const list6 = whereEquals(caseStudies, 'filterCategory', 'Strategy');
+const list7 = whereEquals(caseStudies, 'filterCategory', 'Operations');
+const list8 = whereEquals(caseStudies, 'filterCategory', 'Finance');
+const list9 = whereEquals(caseStudies, 'filterCategory', 'Digital');
+---
+
+<section class="section_case-studies-list">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="case-studies-list-wrapper">
+              <div class="section-header is-center is-case-list">
+                <div class="section-header-title-block is-center">
+                  <h2 class="heading-style-2 section-header-heading">More Case <span class="heading-accent">Studies<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" preserveAspectRatio="none" viewBox="0 0 270 18" height="100%" width="100%" class="heading-accent-line is-blue is-pos-more-cases heading-accent-line is-wide is-blue">
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M4 9C70 5 160 4 266 7"></path>
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M44 15C120 11 200 10 246 12"></path>
+                      </svg></span></h2>
+                </div>
+                <div class="section-header-summary-block is-center is-case-list">
+                  <p class="text-size-large">Selected engagements across strategy, operations, finance and customer experience. All clients and metrics shown are illustrative.</p>
+                </div>
+              </div>
+              <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="case-studies-tabs w-tabs">
+                <div class="case-studies-tabs-menu w-tab-menu">
+                  <a data-w-tab="Tab 1" class="case-studies-tab is-active w-inline-block w-tab-link w--current">
+                    <div>All</div>
+                  </a>
+                  <a data-w-tab="Tab 2" class="case-studies-tab w-inline-block w-tab-link">
+                    <div>Strategy</div>
+                  </a>
+                  <a data-w-tab="Tab 3" class="case-studies-tab w-inline-block w-tab-link">
+                    <div>Operations</div>
+                  </a>
+                  <a data-w-tab="Tab 4" class="case-studies-tab w-inline-block w-tab-link">
+                    <div>Finance</div>
+                  </a>
+                  <a data-w-tab="Tab 5" class="case-studies-tab w-inline-block w-tab-link">
+                    <div>Digital</div>
+                  </a>
+                </div>
+                <div class="case-studies-tabs-content w-tab-content">
+                  <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                    <div class="case-studies-grid-block">
+                      <div class="w-dyn-list">{list5.length > 0 ? (<div role="list" class="case-studies-grid w-dyn-items">{list5.map((item) => (<div role="listitem" class="case-studies-item w-dyn-item"><CaseStudyGridCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                          <div>No items found.</div>
+                        </div>)}<Pagination page={page} /></div>
+                    </div>
+                  </div>
+                  <div data-w-tab="Tab 2" class="w-tab-pane">
+                    <div class="w-dyn-list">{list6.length > 0 ? (<div role="list" class="case-studies-grid w-dyn-items">{list6.map((item) => (<div role="listitem" class="case-studies-item w-dyn-item"><CaseStudyGridCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 3" class="w-tab-pane">
+                    <div class="w-dyn-list">{list7.length > 0 ? (<div role="list" class="case-studies-grid w-dyn-items">{list7.map((item) => (<div role="listitem" class="case-studies-item w-dyn-item"><CaseStudyGridCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 4" class="w-tab-pane">
+                    <div class="w-dyn-list">{list8.length > 0 ? (<div role="list" class="case-studies-grid w-dyn-items">{list8.map((item) => (<div role="listitem" class="case-studies-item w-dyn-item"><CaseStudyGridCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 5" class="w-tab-pane">
+                    <div class="w-dyn-list">{list9.length > 0 ? (<div role="list" class="case-studies-grid w-dyn-items">{list9.map((item) => (<div role="listitem" class="case-studies-item w-dyn-item"><CaseStudyGridCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

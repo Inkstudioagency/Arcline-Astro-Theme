@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "Author",
+    "description": "Blog post authors (name, role and avatar shown on cards and articles)."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "role": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blogPosts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-post.blog-post",
+      "mappedBy": "author"
+    }
+  }
+}

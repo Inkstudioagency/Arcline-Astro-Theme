@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "search",
+    "description": "Optional overrides for the page title and meta description."
+  },
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    }
+  }
+}

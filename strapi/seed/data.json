@@ -1,0 +1,1591 @@
+{
+  "authors": [
+    {
+      "name": "Daniel Hartley",
+      "role": "Partner, Strategy",
+      "avatar": {
+        "file": "arcline-faq-avatar-2.webp",
+        "alt": "Daniel Hartley"
+      }
+    },
+    {
+      "name": "Sarah Collins",
+      "role": "Principal, Operations",
+      "avatar": {
+        "file": "arcline-faq-avatar-1.webp",
+        "alt": "Sarah Collins"
+      }
+    },
+    {
+      "name": "Marcus Reed",
+      "role": "Director, Customer Experience",
+      "avatar": {
+        "file": "arcline-faq-avatar-3.webp",
+        "alt": "Marcus Reed"
+      }
+    }
+  ],
+  "blogPosts": [
+    {
+      "title": "Data-Driven Success",
+      "slug": "data-driven-success",
+      "excerpt": "How leadership teams turn scattered reports into a small set of trusted numbers that actually drive weekly decisions.",
+      "mainImage": {
+        "file": "arcline-blog-data-driven-success-main-image.webp",
+        "alt": "Executive on a phone call reviewing notes at his laptop"
+      },
+      "category": "Strategy",
+      "author": "Daniel Hartley",
+      "readTime": "6 Min Read",
+      "publishedDate": "2026-09-12",
+      "featured": true,
+      "headline": {
+        "lead": "Data-Driven",
+        "accent": "Success"
+      },
+      "statement": {
+        "start": "Most leadership teams are not short of data. They are short of",
+        "accent": "decisions",
+        "end": "."
+      },
+      "intro": "Dashboards multiply, reports get longer, and yet the big calls still come down to instinct and the loudest voice in the room. Reporting answers the question “what happened?” Strategy needs an answer to “what should we do next?” When data is organized around the first question, it rarely helps with the second.",
+      "sections": [
+        {
+          "title": "Decision-grade metrics",
+          "text": "We help teams replace sprawling dashboards with a small set of decision-grade metrics — typically five to seven — each tied to a choice leadership actually makes: where to invest, what to stop, and where to intervene."
+        },
+        {
+          "title": "Building a monthly rhythm",
+          "text": "Metrics only matter if someone looks at them at the right time. A 60-minute monthly decision forum — with pre-read, clear owners and a written log of decisions — does more than any tool."
+        },
+        {
+          "title": "What changes for leadership",
+          "text": "Fewer, sharper signals beat more dashboards. Leadership spends less time debating the numbers and more time deciding what to do about them."
+        }
+      ],
+      "stats": [
+        {
+          "value": "5–7",
+          "label": "Decision-grade metrics"
+        },
+        {
+          "value": "60 min",
+          "label": "Monthly decision forum"
+        },
+        {
+          "value": "1",
+          "label": "Written decision log"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Organize data around decisions, not departments."
+        },
+        {
+          "text": "Keep decision-grade metrics to five to seven."
+        },
+        {
+          "text": "Install a monthly forum with a written decision log."
+        },
+        {
+          "text": "Retire any report nobody has acted on in a quarter."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Strategy"
+        },
+        {
+          "text": "Analytics"
+        },
+        {
+          "text": "Leadership"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-blog-data-driven-success-overview-image.webp",
+        "alt": "Three colleagues reviewing a plan together at a table"
+      },
+      "quote": "“A good metric changes a decision. If it can’t, it belongs in an appendix.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "How leadership teams turn scattered reports into a small set of trusted numbers that actually drive weekly decisions."
+      }
+    },
+    {
+      "title": "Building Resilient Operations",
+      "slug": "building-resilient-operations",
+      "excerpt": "Supply shocks, staff turnover and demand swings are now normal. Here is how to design operations that bend instead of break.",
+      "mainImage": {
+        "file": "arcline-blog-building-resilient-operations-main-image.webp",
+        "alt": "Team discussing operational reports around a meeting table"
+      },
+      "category": "Operations",
+      "author": "Sarah Collins",
+      "readTime": "8 Min Read",
+      "publishedDate": "2026-08-28",
+      "featured": false,
+      "headline": {
+        "lead": "Building Resilient",
+        "accent": "Operations"
+      },
+      "statement": {
+        "start": "The best operators through recent disruption were not the leanest. They knew their",
+        "accent": "weak points",
+        "end": "."
+      },
+      "intro": "Efficiency was the goal of the last decade. Resilience is the goal of this one. The companies that performed best through recent disruptions were not the leanest; they were the ones that knew exactly where their weak points were, and had decided in advance what to do about them.",
+      "sections": [
+        {
+          "title": "Map your single points of failure",
+          "text": "Start with a simple exercise: for every critical process, ask what happens if one supplier, one system or one person disappears for two weeks. The answers reveal where a small buffer, a second source or cross-training will pay for itself many times over."
+        },
+        {
+          "title": "Design for variability",
+          "text": "Plans built on average demand fail when demand is anything but average. We help clients model a realistic range of scenarios and set capacity triggers in advance, so teams know when to scale up or down without waiting for a crisis meeting."
+        },
+        {
+          "title": "Measure recovery, not just output",
+          "text": "Add time-to-recover to your operational scorecard. Tracking how quickly a line, a team or a service returns to normal after a disruption keeps resilience visible long after the last incident has been forgotten."
+        }
+      ],
+      "stats": [
+        {
+          "value": "2 weeks",
+          "label": "Failure test window"
+        },
+        {
+          "value": "3",
+          "label": "Failure types to test"
+        },
+        {
+          "value": "1",
+          "label": "Time-to-recover metric"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Test every critical process for a two-week loss."
+        },
+        {
+          "text": "Plan for a range of demand, not the average."
+        },
+        {
+          "text": "Set capacity triggers before a crisis arrives."
+        },
+        {
+          "text": "Add time-to-recover to the operational scorecard."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Operations"
+        },
+        {
+          "text": "Resilience"
+        },
+        {
+          "text": "Planning"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-ov-b-res.webp",
+        "alt": "Red forklift in a warehouse corridor lined with containers"
+      },
+      "quote": "“Resilience is not spare capacity. It is knowing what breaks first and deciding in advance what you will do.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Supply shocks, staff turnover and demand swings are now normal. Here is how to design operations that bend instead of break."
+      }
+    },
+    {
+      "title": "Customer Experience Strategy",
+      "slug": "customer-experience-strategy",
+      "excerpt": "Great customer experience is an operating decision, not a marketing slogan. A practical framework for aligning teams around it.",
+      "mainImage": {
+        "file": "arcline-blog-customer-experience-strategy-main-image.webp",
+        "alt": "Colleagues gathered around a laptop reviewing customer insights"
+      },
+      "category": "Customer Experience",
+      "author": "Marcus Reed",
+      "readTime": "5 Min Read",
+      "publishedDate": "2026-08-09",
+      "featured": false,
+      "headline": {
+        "lead": "Customer Experience",
+        "accent": "Strategy"
+      },
+      "statement": {
+        "start": "Customers do not experience your org chart. They experience a sequence of",
+        "accent": "moments",
+        "end": "."
+      },
+      "intro": "Customers do not see departments. They move through moments that cut across sales, service, billing and product. When each team optimises its own piece, the overall journey often gets worse, even while every internal scorecard looks healthy.",
+      "sections": [
+        {
+          "title": "Pick the moments that matter",
+          "text": "Not every touchpoint deserves equal investment. We work with clients to identify the three to five moments that most influence retention and referral, then focus effort there first."
+        },
+        {
+          "title": "Give one leader the whole journey",
+          "text": "Shared ownership tends to mean no ownership. Assigning a single accountable executive for each key journey, with the authority to change processes across departments, is the fastest way to remove friction."
+        },
+        {
+          "title": "Close the loop every week",
+          "text": "Feedback is only valuable when it reaches the people who can act on it. A short weekly review of customer comments, paired with a visible list of fixes, keeps the whole organisation focused on the customer rather than on internal metrics."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3–5",
+          "label": "Moments to fund first"
+        },
+        {
+          "value": "1",
+          "label": "Accountable journey leader"
+        },
+        {
+          "value": "Weekly",
+          "label": "Customer feedback review"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Focus on the three to five moments that matter most."
+        },
+        {
+          "text": "Give each key journey one accountable executive."
+        },
+        {
+          "text": "Review customer comments every week."
+        },
+        {
+          "text": "Keep the list of fixes visible to everyone."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Customers"
+        },
+        {
+          "text": "Strategy"
+        },
+        {
+          "text": "Service"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-ov-b-cx.webp",
+        "alt": "Woman in a grey suit standing with arms crossed in a bright office"
+      },
+      "quote": "“Customers never see your org chart. They only feel the gaps between the teams on it.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Great customer experience is an operating decision, not a marketing slogan. A practical framework for aligning teams around it."
+      }
+    },
+    {
+      "title": "Cash Flow Clarity for Growing Firms",
+      "slug": "cash-flow-clarity-for-growing-firms",
+      "excerpt": "Profitable companies still run out of cash. A rolling 13-week forecast gives founders and CFOs the early warning they need.",
+      "mainImage": {
+        "file": "arcline-blog-cash-flow-clarity-for-growing-firms-main-image.webp",
+        "alt": "Man and woman talking across a table with a laptop"
+      },
+      "category": "Finance",
+      "author": "Daniel Hartley",
+      "readTime": "7 Min Read",
+      "publishedDate": "2026-07-22",
+      "featured": false,
+      "headline": {
+        "lead": "Cash Flow Clarity for",
+        "accent": "Growing Firms"
+      },
+      "statement": {
+        "start": "Growing firms are rarely short of revenue. They are short of",
+        "accent": "cash",
+        "end": "."
+      },
+      "intro": "Growth consumes cash. New hires, inventory and longer customer payment terms all pull money out of the business before revenue catches up. That is why fast-growing firms are often profitable on paper and short of cash in practice, and why the warning signs rarely show up in a monthly report.",
+      "sections": [
+        {
+          "title": "Forecast in weeks, not quarters",
+          "text": "A rolling 13-week cash forecast shows exactly when pressure points will arrive. Updated every Friday, it turns surprises into decisions you can make a month in advance."
+        },
+        {
+          "title": "Work the levers early",
+          "text": "Once the forecast is in place, the levers become obvious: invoice faster, tighten credit terms for slow payers, stage large purchases and negotiate supplier terms before you need them."
+        },
+        {
+          "title": "Share the view with operators",
+          "text": "Cash is not only the finance team's job. When department heads see how their decisions affect the forecast, spending discipline improves without heavy-handed controls."
+        }
+      ],
+      "stats": [
+        {
+          "value": "13",
+          "label": "Weeks in the forecast"
+        },
+        {
+          "value": "Weekly",
+          "label": "Friday forecast update"
+        },
+        {
+          "value": "4",
+          "label": "Cash levers to work"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Forecast cash in weeks, not quarters."
+        },
+        {
+          "text": "Update the 13-week view every Friday."
+        },
+        {
+          "text": "Invoice faster and stage large purchases."
+        },
+        {
+          "text": "Share the forecast with department heads."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Finance"
+        },
+        {
+          "text": "Forecasting"
+        },
+        {
+          "text": "Growth"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-ov-b-cash.webp",
+        "alt": "Two colleagues reviewing numbers on a laptop"
+      },
+      "quote": "“Profit is an opinion until the cash arrives. Thirteen weeks of forecast shows you the truth early.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Profitable companies still run out of cash. A rolling 13-week forecast gives founders and CFOs the early warning they need."
+      }
+    },
+    {
+      "title": "Scaling Without Losing Focus",
+      "slug": "scaling-without-losing-focus",
+      "excerpt": "The habits that got you to fifty people will not get you to five hundred. How to grow headcount while keeping priorities sharp.",
+      "mainImage": {
+        "file": "arcline-blog-scaling-without-losing-focus-main-image.webp",
+        "alt": "Senior adviser in a brown blazer in discussion with a colleague"
+      },
+      "category": "Growth",
+      "author": "Sarah Collins",
+      "readTime": "6 Min Read",
+      "publishedDate": "2026-07-03",
+      "featured": false,
+      "headline": {
+        "lead": "Scaling Without",
+        "accent": "Losing Focus"
+      },
+      "statement": {
+        "start": "Founders cannot be in every meeting forever. Growth depends on clear",
+        "accent": "priorities",
+        "end": "."
+      },
+      "intro": "Every growing company reaches a point where the founders can no longer be in every meeting. Without a clear way to set and cascade priorities, teams start pulling in different directions. The habits that got you to fifty people will not get you to five hundred.",
+      "sections": [
+        {
+          "title": "Limit the number of priorities",
+          "text": "Three company-wide priorities per quarter is usually the maximum a team can execute well. Anything beyond that becomes a wish list."
+        },
+        {
+          "title": "Make trade-offs explicit",
+          "text": "Saying yes to one initiative means saying no to others. Writing down what the company will not do this quarter is often more useful than the list of what it will."
+        },
+        {
+          "title": "Invest in middle management",
+          "text": "Managers translate strategy into daily work. Giving them the context, decision rights and coaching they need is the single best investment a scaling company can make."
+        }
+      ],
+      "stats": [
+        {
+          "value": "3",
+          "label": "Priorities per quarter"
+        },
+        {
+          "value": "1",
+          "label": "Written not-doing list"
+        },
+        {
+          "value": "90 days",
+          "label": "Priority planning cycle"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Cap company-wide priorities at three a quarter."
+        },
+        {
+          "text": "Write down what the company will not do."
+        },
+        {
+          "text": "Give managers context and decision rights."
+        },
+        {
+          "text": "Coach managers before adding more of them."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Growth"
+        },
+        {
+          "text": "Leadership"
+        },
+        {
+          "text": "Management"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-ov-b-scaling.webp",
+        "alt": "Leadership team meeting around a long boardroom table"
+      },
+      "quote": "“If everything is a priority, your managers will choose for you. Write down what you will not do.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "The habits that got you to fifty people will not get you to five hundred. How to grow headcount while keeping priorities sharp."
+      }
+    },
+    {
+      "title": "Making Digital Transformation Stick",
+      "slug": "making-digital-transformation-stick",
+      "excerpt": "Most transformation programmes stall after the software goes live. The difference is in adoption, ownership and a clear business case.",
+      "mainImage": {
+        "file": "arcline-blog-making-digital-transformation-stick-main-image.webp",
+        "alt": "Colleagues working on laptops at a cafe table"
+      },
+      "category": "Strategy",
+      "author": "Marcus Reed",
+      "readTime": "9 Min Read",
+      "publishedDate": "2026-06-14",
+      "featured": false,
+      "headline": {
+        "lead": "Making Digital Transformation",
+        "accent": "Stick"
+      },
+      "statement": {
+        "start": "Launching a new platform is the easy part. The real work is lasting",
+        "accent": "adoption",
+        "end": "."
+      },
+      "intro": "Launching a new platform is the easy part. Getting people to change how they work is where most digital programmes lose momentum and value. Most transformation programmes stall after the software goes live, and the difference comes down to adoption, ownership and a clear business case.",
+      "sections": [
+        {
+          "title": "Anchor every project in a business outcome",
+          "text": "Before choosing tools, agree on the measurable result: shorter order cycles, fewer manual hand-offs, faster month-end close. That outcome guides every later design decision."
+        },
+        {
+          "title": "Design with the people who will use it",
+          "text": "Frontline teams know where today's processes break. Involving them early produces better workflows and builds the champions you will need at launch."
+        },
+        {
+          "title": "Plan for the first ninety days after go-live",
+          "text": "Adoption needs as much planning as implementation. Clear training, quick fixes for early issues and visible usage metrics keep the new way of working from sliding back into old habits."
+        }
+      ],
+      "stats": [
+        {
+          "value": "1",
+          "label": "Outcome per project"
+        },
+        {
+          "value": "90 days",
+          "label": "Post-launch adoption plan"
+        },
+        {
+          "value": "3",
+          "label": "Early adoption levers"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Agree the measurable outcome before choosing tools."
+        },
+        {
+          "text": "Involve frontline teams from the start."
+        },
+        {
+          "text": "Plan the first ninety days after go-live."
+        },
+        {
+          "text": "Keep usage metrics visible to everyone."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Strategy"
+        },
+        {
+          "text": "Technology"
+        },
+        {
+          "text": "Change"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-ov-b-digital.webp",
+        "alt": "Four colleagues gathered around a laptop in a bright studio"
+      },
+      "quote": "“Go-live is the starting line. The value only shows up when people stop using the old way.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Most transformation programmes stall after the software goes live. The difference is in adoption, ownership and a clear business case."
+      }
+    },
+    {
+      "title": "Innovative Collaborative Teams",
+      "slug": "innovative-collaborative-teams",
+      "excerpt": "The best ideas rarely come from one desk. How leaders build teams that share problems early and turn debate into better decisions.",
+      "mainImage": {
+        "file": "arcline-blog-innovative-collaborative-teams-main-image.webp",
+        "alt": "Woman in a blue blazer leading a discussion with two colleagues"
+      },
+      "category": "Growth",
+      "author": "Sarah Collins",
+      "readTime": "9 Min Read",
+      "publishedDate": "2026-06-02",
+      "featured": false,
+      "headline": {
+        "lead": "Innovative Collaborative",
+        "accent": "Teams"
+      },
+      "statement": {
+        "start": "Good teams do not avoid disagreement. They turn it into better",
+        "accent": "decisions",
+        "end": "."
+      },
+      "intro": "Most companies say they want collaboration, then reward people for protecting their own patch. Real collaboration is a working habit: problems are shared early, ideas are tested in the open, and disagreement is treated as useful input rather than a threat to anyone's position.",
+      "sections": [
+        {
+          "title": "Bring problems in early",
+          "text": "Teams collaborate best when an issue is raised while it is still small. A short weekly slot where anyone can table an open problem, with no finished answer required, surfaces risks weeks before they reach a steering committee."
+        },
+        {
+          "title": "Make disagreement safe and structured",
+          "text": "Ask for at least three perspectives before a decision is made, and name who will argue the opposite case. Structure takes the personal edge out of debate and makes it easier for quieter team members to speak."
+        },
+        {
+          "title": "Close the loop on every idea",
+          "text": "People stop contributing when ideas disappear. Record each suggestion, decide within a set time whether to test it, park it or drop it, and tell the person who raised it. Visible follow-through is what keeps collaboration going."
+        }
+      ],
+      "stats": [
+        {
+          "value": "1",
+          "label": "Weekly open-problem slot"
+        },
+        {
+          "value": "3",
+          "label": "Voices before any decision"
+        },
+        {
+          "value": "48 hrs",
+          "label": "To close each action"
+        }
+      ],
+      "takeaways": [
+        {
+          "text": "Give open problems a regular slot on the agenda."
+        },
+        {
+          "text": "Hear at least three perspectives before deciding."
+        },
+        {
+          "text": "Name someone to argue the opposite case."
+        },
+        {
+          "text": "Tell people what happened to their ideas."
+        }
+      ],
+      "tags": [
+        {
+          "text": "Teams"
+        },
+        {
+          "text": "Leadership"
+        },
+        {
+          "text": "Culture"
+        }
+      ],
+      "overviewImage": {
+        "file": "arcline-blog-innovative-collaborative-teams-overview-image.webp",
+        "alt": "Woman in a grey blazer explaining a point to two colleagues"
+      },
+      "quote": "“Collaboration is not everyone agreeing. It is everyone being heard before the decision is made.”",
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "The best ideas rarely come from one desk. How leaders build teams that share problems early and turn debate into better decisions."
+      }
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "A Customer Experience Built for Growth",
+      "slug": "a-customer-experience-built-for-growth",
+      "caseNumber": 1,
+      "sortOrder": 1,
+      "industry": "Customer Experience",
+      "client": "Harborline Services (fictional client)",
+      "summary": "A regional services brand unified five disconnected journeys into one connected experience.",
+      "resultLabel": "Increase in customer engagement",
+      "resultValue": "+125",
+      "resultChange": "12%",
+      "mainImage": {
+        "file": "arcline-cases-a-customer-experience-built-for-growth-main-image.webp",
+        "alt": "Consultant in a blue blazer talking with two colleagues at a table"
+      },
+      "featureImage": {
+        "file": "home-v2-case-smartphone-man.webp",
+        "alt": "Smiling customer using a smartphone outdoors"
+      },
+      "filterCategory": "Digital",
+      "headline": {
+        "lead": "A Customer Experience Built for",
+        "accent": "Growth"
+      },
+      "statement": {
+        "start": "Five journeys and one brand left customers",
+        "accent": "repeating themselves",
+        "end": "at every step."
+      },
+      "intro": "Harborline Services had grown through acquisitions and inherited five booking, billing and support journeys that did not talk to each other. Satisfaction scores were falling, and leadership asked us to connect the experience without pausing the business.",
+      "sectionTitle": "Every touchpoint needed one shared service blueprint.",
+      "sectionText": "We mapped every touchpoint with frontline teams, defined one service blueprint and rolled out a shared customer record in three phased releases. Engagement rose sharply within two quarters, repeat bookings climbed and support contacts per customer dropped as self-service finally worked end to end.",
+      "stats": [
+        {
+          "value": "5",
+          "label": "Journeys Unified"
+        },
+        {
+          "value": "3",
+          "label": "Phased Releases"
+        },
+        {
+          "value": "2",
+          "label": "Quarters To Impact"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-cx-c1.webp",
+          "alt": "Two colleagues in blue shirts chatting over coffee"
+        },
+        {
+          "file": "arcline-cx-c2.webp",
+          "alt": "Two colleagues working through documents at a laptop"
+        },
+        {
+          "file": "arcline-cx-c3.webp",
+          "alt": "Three colleagues sketching a customer journey with sticky notes"
+        },
+        {
+          "file": "arcline-cx-c4.webp",
+          "alt": "Three consultants standing together with arms crossed"
+        }
+      ],
+      "services": "Customer Experience, Digital Transformation",
+      "timeline": "22 weeks",
+      "team": "1 partner, 4 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-cx.webp",
+        "alt": "Woman in blue presenting to a seated team beside a flip chart"
+      },
+      "quote": {
+        "text": "“Customers stopped repeating themselves at every step. One connected journey did more for loyalty than any campaign we ran.”",
+        "authorName": "Grace Lin",
+        "authorRole": "Chief Customer Officer, Harborline Services",
+        "authorPhoto": {
+          "file": "quote-3.webp",
+          "alt": "Grace Lin"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A regional services brand unified five disconnected journeys into one connected experience."
+      }
+    },
+    {
+      "title": "Rebuilding Operations for Scalable Growth",
+      "slug": "rebuilding-operations-for-scalable-growth",
+      "caseNumber": 2,
+      "sortOrder": 2,
+      "industry": "Business Operations",
+      "client": "Meridian Freight Co. (fictional client)",
+      "summary": "Demand doubled in three years, but the operating model had not. We redesigned core workflows to scale.",
+      "resultLabel": "Faster operational workflow",
+      "resultValue": "56%",
+      "resultChange": "20%",
+      "mainImage": {
+        "file": "arcline-cases-rebuilding-operations-for-scalable-growt-main-image.webp",
+        "alt": "Team reviewing printed plans around a meeting table"
+      },
+      "featureImage": {
+        "file": "home-v2-case-couple-selfie.webp",
+        "alt": "Two happy customers taking a selfie together"
+      },
+      "filterCategory": "Operations",
+      "headline": {
+        "lead": "Rebuilding Operations for Scalable",
+        "accent": "Growth"
+      },
+      "statement": {
+        "start": "Demand doubled in three years. The operating model had not",
+        "accent": "changed in",
+        "end": "ten."
+      },
+      "intro": "Meridian Freight Co. was winning more work than it could reliably deliver. Order volume had doubled while processes, roles and tooling stayed the same, so teams relied on spreadsheets and heroics. Leadership asked us to redesign how work flowed through the business without adding headcount.",
+      "sectionTitle": "Handoffs between sales, planning and dispatch were breaking under volume.",
+      "sectionText": "We ran a four-week diagnostic, redesigned the order-to-delivery workflow, clarified decision rights and introduced a weekly operating rhythm with a handful of shared metrics. Cycle times fell by more than half, overtime dropped and the business absorbed another year of growth.",
+      "stats": [
+        {
+          "value": "7",
+          "label": "Order Teams"
+        },
+        {
+          "value": "4",
+          "label": "Disconnected Systems"
+        },
+        {
+          "value": "60%",
+          "label": "Planner Reconciliation"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-ops-c1.webp",
+          "alt": "Forklift driver looking across a warehouse aisle"
+        },
+        {
+          "file": "arcline-ops-c2.webp",
+          "alt": "Two workers in high-visibility vests moving boxes at a loading bay"
+        },
+        {
+          "file": "arcline-ops-c3.webp",
+          "alt": "Forklift parked in a warehouse with light from an open door"
+        },
+        {
+          "file": "arcline-ops-c4.webp",
+          "alt": "Warehouse worker holding a parcel between stocked shelves"
+        }
+      ],
+      "services": "Operations & Performance, Business Strategy",
+      "timeline": "14 weeks",
+      "team": "1 partner, 3 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-ops.webp",
+        "alt": "Two drivers standing in a freight yard in front of parked trucks"
+      },
+      "quote": {
+        "text": "“For the first time, everyone can see the whole flow and knows exactly what they own in it. We grew 30% last year without the chaos.”",
+        "authorName": "Robert Hale",
+        "authorRole": "COO, Meridian Freight Co.",
+        "authorPhoto": {
+          "file": "quote-1.webp",
+          "alt": "Robert Hale"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Demand doubled in three years, but the operating model had not. We redesigned core workflows to scale."
+      }
+    },
+    {
+      "title": "Turning Business Data Into Better Decisions",
+      "slug": "turning-business-data-into-better-decisions",
+      "caseNumber": 3,
+      "sortOrder": 3,
+      "industry": "Strategy & Analytics",
+      "client": "Northvale Capital (fictional client)",
+      "summary": "A leadership team drowning in dashboards moved to a small set of decision-grade metrics.",
+      "resultLabel": "Faster decision cycles",
+      "resultValue": "85%",
+      "resultChange": "20%",
+      "mainImage": {
+        "file": "arcline-cases-turning-business-data-into-better-decisi-main-image.webp",
+        "alt": "Presenter walking a team through charts on a large screen"
+      },
+      "featureImage": {
+        "file": "arcline-data-feat.webp",
+        "alt": "Smiling man in a beige sweater beside a wall of sticky notes"
+      },
+      "filterCategory": "Strategy",
+      "headline": {
+        "lead": "Turning Business Data Into Better",
+        "accent": "Decisions"
+      },
+      "statement": {
+        "start": "Forty dashboards every month, and big calls still",
+        "accent": "relied on",
+        "end": "gut feel."
+      },
+      "intro": "Northvale Capital's leadership team reviewed more than forty dashboards every month, yet key investment decisions still took weeks. They asked us to cut the noise and give every leader a clear view of what to act on.",
+      "sectionTitle": "Reporting had grown faster than anyone's ability to use it.",
+      "sectionText": "We agreed on the decisions that mattered most, cut reporting to eight decision-grade metrics and built a monthly review that links each metric to an owner and an action. Decision cycles shortened dramatically, meetings became more focused and the team now acts on leading indicators instead of last quarter results.",
+      "stats": [
+        {
+          "value": "40",
+          "label": "Monthly Dashboards"
+        },
+        {
+          "value": "8",
+          "label": "Decision Metrics"
+        },
+        {
+          "value": "85%",
+          "label": "Faster Decisions"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-data-c1.webp",
+          "alt": "Woman in a brown blazer reviewing printed reports"
+        },
+        {
+          "file": "arcline-data-c2.webp",
+          "alt": "Woman presenting a growth chart to a boardroom team"
+        },
+        {
+          "file": "arcline-data-c3.webp",
+          "alt": "Woman presenting a data dashboard on a large screen"
+        },
+        {
+          "file": "arcline-data-c4.webp",
+          "alt": "Man in a burgundy suit talking with two colleagues"
+        }
+      ],
+      "services": "Strategy & Analytics, Leadership Advisory",
+      "timeline": "10 weeks",
+      "team": "1 partner, 2 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-data.webp",
+        "alt": "Woman standing at the head of a table presenting to colleagues"
+      },
+      "quote": {
+        "text": "“We went from forty dashboards to eight numbers we trust. Decisions that used to take weeks now happen in one meeting.”",
+        "authorName": "Victor Morales",
+        "authorRole": "Managing Director, Northvale Capital",
+        "authorPhoto": {
+          "file": "quote-0.webp",
+          "alt": "Victor Morales"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A leadership team drowning in dashboards moved to a small set of decision-grade metrics."
+      }
+    },
+    {
+      "title": "Boosting Customer Satisfaction",
+      "slug": "boosting-customer-satisfaction",
+      "caseNumber": 4,
+      "sortOrder": 4,
+      "industry": "Customer Retention",
+      "client": "Brightloop Software (fictional client)",
+      "summary": "A subscription software firm cut churn by rebuilding onboarding and its customer success playbooks.",
+      "resultLabel": "Reduction in churn rate",
+      "resultValue": "-15%",
+      "resultChange": "8%",
+      "mainImage": {
+        "file": "arcline-cases-boosting-customer-satisfaction-main.webp",
+        "alt": "Consultant talking with two smiling colleagues about customer results"
+      },
+      "featureImage": {
+        "file": "home-v2-case-friends-laughing.webp",
+        "alt": "Two friends hugging and laughing outdoors"
+      },
+      "filterCategory": "Digital",
+      "headline": {
+        "lead": "Boosting Customer",
+        "accent": "Satisfaction"
+      },
+      "statement": {
+        "start": "New customers kept signing up, then",
+        "accent": "walked away",
+        "end": "within ninety days."
+      },
+      "intro": "Brightloop Software was winning new customers but losing too many early. Onboarding varied by account manager and nobody owned the warning signs, so leadership asked us to make the first ninety days consistent and measurable.",
+      "sectionTitle": "Onboarding depended on who happened to pick up the account.",
+      "sectionText": "We segmented accounts by value and risk, designed a standard onboarding path and gave customer success a simple health score with clear playbooks for each stage. Early churn dropped steadily, expansion revenue grew and the team now spots at-risk accounts weeks before renewal conversations.",
+      "stats": [
+        {
+          "value": "90",
+          "label": "Day Risk Window"
+        },
+        {
+          "value": "1",
+          "label": "Shared Health Score"
+        },
+        {
+          "value": "15%",
+          "label": "Lower Churn"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-ret-c1.webp",
+          "alt": "Two colleagues in sweaters working at a laptop in a dim office"
+        },
+        {
+          "file": "arcline-ret-c2.webp",
+          "alt": "Two colleagues discussing figures on a desktop monitor"
+        },
+        {
+          "file": "arcline-ret-c3.webp",
+          "alt": "Two colleagues leaning over a table to review a laptop"
+        },
+        {
+          "file": "arcline-ret-c4.webp",
+          "alt": "Smiling woman in a grey blazer reading papers at her laptop"
+        }
+      ],
+      "services": "Customer Retention, Customer Success Design",
+      "timeline": "12 weeks",
+      "team": "1 partner, 3 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-ret.webp",
+        "alt": "Man and woman talking across a desk with an open laptop"
+      },
+      "quote": {
+        "text": "“Now we see at-risk accounts weeks before renewal. The first ninety days finally feel the same for every customer.”",
+        "authorName": "Mei Tanaka",
+        "authorRole": "VP Customer Success, Brightloop Software",
+        "authorPhoto": {
+          "file": "quote-4.webp",
+          "alt": "Mei Tanaka"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A subscription software firm cut churn by rebuilding onboarding and its customer success playbooks."
+      }
+    },
+    {
+      "title": "Enhancing Cross-Selling",
+      "slug": "enhancing-cross-selling",
+      "caseNumber": 5,
+      "sortOrder": 5,
+      "industry": "Sales Performance",
+      "client": "Corvane Supply (fictional client)",
+      "summary": "A B2B distributor lifted basket size by aligning pricing, bundles and sales incentives.",
+      "resultLabel": "Increase in average order value",
+      "resultValue": "+35%",
+      "resultChange": "12%",
+      "mainImage": {
+        "file": "arcline-cases-enhancing-cross-selling-main-image.webp",
+        "alt": "Smiling woman in a lilac sweater using her phone outdoors"
+      },
+      "featureImage": {
+        "file": "home-v2-case-friends-phones.webp",
+        "alt": "Enhancing Cross-Selling"
+      },
+      "filterCategory": "Finance",
+      "headline": {
+        "lead": "Enhancing",
+        "accent": "Cross-Selling"
+      },
+      "statement": {
+        "start": "Customers trusted the catalogue, yet most",
+        "accent": "bought from",
+        "end": "a single category."
+      },
+      "intro": "Corvane Supply sold a broad catalogue, but most customers only ever bought from one part of it. Sales incentives rewarded volume rather than the full customer relationship, and leadership asked us to change that without discounting.",
+      "sectionTitle": "Incentives rewarded volume, not the full customer relationship.",
+      "sectionText": "We analysed purchase patterns, built three targeted product bundles, refreshed pricing guardrails and reworked incentives to reward multi-category accounts. Average order value rose within one sales cycle, and the share of customers buying from two or more categories nearly doubled.",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Product Bundles"
+        },
+        {
+          "value": "2x",
+          "label": "Multi-Category Buyers"
+        },
+        {
+          "value": "35%",
+          "label": "Higher Order Value"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-sales-c1.webp",
+          "alt": "Man and woman in brown suits shaking hands in an office"
+        },
+        {
+          "file": "arcline-sales-c2.webp",
+          "alt": "Close-up of a business handshake"
+        },
+        {
+          "file": "arcline-sales-c3.webp",
+          "alt": "Man in a burgundy blazer leading a meeting at a table"
+        },
+        {
+          "file": "arcline-sales-c4.webp",
+          "alt": "Team around a table while a colleague writes on a flip chart"
+        }
+      ],
+      "services": "Sales Performance, Pricing Strategy",
+      "timeline": "12 weeks",
+      "team": "1 partner, 2 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-sales.webp",
+        "alt": "Five colleagues reviewing documents around a meeting table"
+      },
+      "quote": {
+        "text": "“We never had to discount to grow the basket. Our reps simply started selling the whole catalogue, and customers noticed.”",
+        "authorName": "Adrian Reyes",
+        "authorRole": "Head of Sales, Corvane Supply",
+        "authorPhoto": {
+          "file": "quote-2.webp",
+          "alt": "Adrian Reyes"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A B2B distributor lifted basket size by aligning pricing, bundles and sales incentives."
+      }
+    },
+    {
+      "title": "Streamlining for Savings",
+      "slug": "streamlining-for-savings",
+      "caseNumber": 6,
+      "sortOrder": 6,
+      "industry": "Operational Efficiency",
+      "client": "Larkfield Logistics (fictional client)",
+      "summary": "A logistics group removed duplicate work across its depots and cut its operating costs.",
+      "resultLabel": "Reduction in operational costs",
+      "resultValue": "-$75",
+      "resultChange": "9%",
+      "mainImage": {
+        "file": "arcline-cases-streamlining-for-savings-main-image.webp",
+        "alt": "Team discussing charts on a wall screen in a meeting"
+      },
+      "featureImage": {
+        "file": "arcline-eff-feat.webp",
+        "alt": "Streamlining for Savings"
+      },
+      "filterCategory": "Operations",
+      "headline": {
+        "lead": "Streamlining for",
+        "accent": "Savings"
+      },
+      "statement": {
+        "start": "Every depot ran its own way, and no one could see",
+        "accent": "the money",
+        "end": "leaving the business."
+      },
+      "intro": "Larkfield Logistics had grown depot by depot, and each site ran its own processes. Costs rose faster than volume with no clear explanation, so leadership asked us to find the duplicate work and remove it.",
+      "sectionTitle": "Costs were rising faster than volume across every site.",
+      "sectionText": "We compared every depot against a shared baseline, standardised the top ten processes and consolidated purchasing into one team. Operating costs fell within two quarters, and managers now review the same weekly cost view at every site.",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Standardised Processes"
+        },
+        {
+          "value": "1",
+          "label": "Purchasing Team"
+        },
+        {
+          "value": "2",
+          "label": "Quarters To Savings"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-eff-c1.webp",
+          "alt": "Forklift driver at work in a warehouse"
+        },
+        {
+          "file": "arcline-eff-c2.webp",
+          "alt": "Forklift driver moving between stocked warehouse shelves"
+        },
+        {
+          "file": "arcline-eff-c3.webp",
+          "alt": "Woman in gloves picking boxes from warehouse shelves"
+        },
+        {
+          "file": "arcline-eff-c4.webp",
+          "alt": "Depot worker in a cap carrying a box in front of stacked parcels"
+        }
+      ],
+      "services": "Operational Efficiency, Procurement",
+      "timeline": "18 weeks",
+      "team": "1 partner, 3 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-eff.webp",
+        "alt": "Forklift in a long, brightly lit warehouse aisle"
+      },
+      "quote": {
+        "text": "“Every depot now looks at the same weekly cost view. We finally know where the money goes, and costs came down within two quarters.”",
+        "authorName": "Erik Lindqvist",
+        "authorRole": "COO, Larkfield Logistics",
+        "authorPhoto": {
+          "file": "quote-7.webp",
+          "alt": "Erik Lindqvist"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A logistics group removed duplicate work across its depots and cut its operating costs."
+      }
+    },
+    {
+      "title": "Innovative Product Solutions",
+      "slug": "innovative-product-solutions",
+      "caseNumber": 7,
+      "sortOrder": 7,
+      "industry": "Product Development",
+      "client": "Veloris Devices (fictional client)",
+      "summary": "A hardware maker shortened its release cycle and raised product quality scores.",
+      "resultLabel": "Enhanced product quality",
+      "resultValue": "+30",
+      "resultChange": "15%",
+      "mainImage": {
+        "file": "arcline-cases-innovative-product-solutions-hero.webp",
+        "alt": "Product team reviewing a plan together around a table"
+      },
+      "featureImage": {
+        "file": "arcline-prod-feat.webp",
+        "alt": "Innovative Product Solutions"
+      },
+      "filterCategory": "Digital",
+      "headline": {
+        "lead": "Innovative Product",
+        "accent": "Solutions"
+      },
+      "statement": {
+        "start": "Releases shipped on time, but defects kept",
+        "accent": "reaching customers",
+        "end": "after every launch."
+      },
+      "intro": "Veloris Devices met its release dates, but testing happened too late in each cycle and problems surfaced in the field. Leadership asked us to raise product quality without slowing the release calendar.",
+      "sectionTitle": "Testing happened too late to protect each release.",
+      "sectionText": "We moved quality checks earlier, set clear release criteria and gave product teams one shared view of customer issues. Quality scores improved release after release, and support volume fell as fewer defects reached the field.",
+      "stats": [
+        {
+          "value": "+30",
+          "label": "Quality Score Points"
+        },
+        {
+          "value": "1",
+          "label": "Shared Issue View"
+        },
+        {
+          "value": "15%",
+          "label": "Less Support Volume"
+        }
+      ],
+      "collage": [
+        {
+          "file": "arcline-prod-c1.webp",
+          "alt": "Team reviewing product blueprints spread across a table"
+        },
+        {
+          "file": "arcline-prod-c2.webp",
+          "alt": "Two colleagues looking at charts on a desktop monitor"
+        },
+        {
+          "file": "arcline-prod-c3.webp",
+          "alt": "Overhead view of a team arranging printed plans and sticky notes"
+        },
+        {
+          "file": "arcline-prod-c4.webp",
+          "alt": "Man in a red sweater speaking to colleagues around a table"
+        }
+      ],
+      "services": "Product Development, Quality Management",
+      "timeline": "14 weeks",
+      "team": "1 partner, 2 consultants",
+      "overviewImage": {
+        "file": "arcline-ov-prod.webp",
+        "alt": "Four colleagues working on laptops at a shared table"
+      },
+      "quote": {
+        "text": "“We still ship on time, but now problems are caught long before launch. Quality scores rise with every release.”",
+        "authorName": "Marco Bellini",
+        "authorRole": "VP Product, Veloris Devices",
+        "authorPhoto": {
+          "file": "quote-6.webp",
+          "alt": "Marco Bellini"
+        }
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "A hardware maker shortened its release cycle and raised product quality scores."
+      }
+    }
+  ],
+  "services": [
+    {
+      "title": "Business Strategy",
+      "slug": "business-strategy",
+      "number": 1,
+      "sortOrder": 1,
+      "summary": "Clarify where to compete, how to win, and which bets deserve your capital and attention.",
+      "heroSummary": "We help leadership teams make the few choices that matter most: where to play, how to win and what to stop doing, so capital and attention follow a strategy everyone can act on.",
+      "cardVisual": {
+        "file": "services-strategy-brief.webp",
+        "alt": "Business Strategy card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-strategy.webp",
+        "alt": "Strategy brief card showing 3 of 7 initiatives funded this planning cycle"
+      },
+      "cardAnimation": "/documents/02-strategy-brief.json",
+      "cardAnimationLabel": "Strategy Brief: 3 of 7 initiatives funded this planning cycle. Where to compete: mid-market B2B, North America.",
+      "heroPhoto": {
+        "file": "arcline-services-business-strategy-hero-photo.webp",
+        "alt": "Leadership team debating options at a meeting table in front of a whiteboard"
+      },
+      "typicalDuration": "8–12 weeks",
+      "team": "1 partner + 2–3 consultants",
+      "engagementModel": "Fixed scope or retainer",
+      "idealFor": "Growth-stage to mid-market",
+      "challenges": [
+        {
+          "title": "Overloaded Priorities",
+          "text": "When everything matters, nothing does. Teams juggle many projects with limited people and budget."
+        },
+        {
+          "title": "Budget-Strategy Gap",
+          "text": "The plan says one thing; the spending says another. Resources follow history instead of intent."
+        },
+        {
+          "title": "Delayed Politics",
+          "text": "Big calls stall in committee because there is no shared view of the trade-offs."
+        }
+      ],
+      "brief": {
+        "title": "Strategy Brief",
+        "tag": "FY27",
+        "label": "Where to compete",
+        "value": "Mid-market B2B, North America",
+        "status": "Priority"
+      },
+      "headline": {
+        "lead": "Business",
+        "accent": "Strategy"
+      },
+      "statement": {
+        "start": "Good strategy is a set of choices — and the ",
+        "accent": "discipline",
+        "end": " to fund them."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Clarify where to compete, how to win, and which bets deserve your capital and attention."
+      }
+    },
+    {
+      "title": "Financial Advisory",
+      "slug": "financial-advisory",
+      "number": 2,
+      "sortOrder": 2,
+      "summary": "Planning, modeling and capital decisions grounded in a clear view of performance and risk.",
+      "heroSummary": "We turn financial data into decisions: robust models, honest scenarios and capital allocation choices your board can trust.",
+      "cardVisual": {
+        "file": "services-financial-model.webp",
+        "alt": "Financial Advisory card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-financial.webp",
+        "alt": "Financial model card showing 12.4M base-case EBITDA for FY27"
+      },
+      "cardAnimation": "/documents/03-financial-model.json",
+      "cardAnimationLabel": "Financial Model: $12.4M base-case EBITDA, FY27. Reinvest 60%, return 40%. Low risk.",
+      "heroPhoto": {
+        "file": "arcline-services-financial-advisory-hero-photo.webp",
+        "alt": "Two advisers reviewing charts on a whiteboard"
+      },
+      "typicalDuration": "6–10 weeks",
+      "team": "1 partner + 2 finance specialists",
+      "engagementModel": "Fixed scope or interim CFO support",
+      "idealFor": "Scaling and PE-backed companies",
+      "challenges": [
+        {
+          "title": "Unreliable Forecasts",
+          "text": "Forecasts miss by wide margins, so the board has stopped trusting the numbers behind each plan."
+        },
+        {
+          "title": "Cash Blind Spots",
+          "text": "Profit looks healthy on paper while working capital quietly drains the cash you need to grow."
+        },
+        {
+          "title": "Gut-Feel Investments",
+          "text": "Capital goes to the loudest sponsor because no one compares projects on returns and risk."
+        }
+      ],
+      "brief": {
+        "title": "Financial Model",
+        "tag": "FY27",
+        "label": "Base-case EBITDA",
+        "value": "12.4M across three scenarios",
+        "status": "Reviewed"
+      },
+      "headline": {
+        "lead": "Financial",
+        "accent": "Advisory"
+      },
+      "statement": {
+        "start": "Every capital decision deserves a ",
+        "accent": "model",
+        "end": " you can defend."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Planning, modeling and capital decisions grounded in a clear view of performance and risk."
+      }
+    },
+    {
+      "title": "Operations & Performance",
+      "slug": "operations-performance",
+      "number": 3,
+      "sortOrder": 3,
+      "summary": "Redesign processes, structures and KPIs so the organization delivers more with less friction.",
+      "heroSummary": "We find where work gets stuck and redesign processes, roles and metrics so your teams deliver more value with less effort.",
+      "cardVisual": {
+        "file": "services-operations-review.webp",
+        "alt": "Operations & Performance card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-operations.webp",
+        "alt": "Operations review chart showing cycle time down 32 percent"
+      },
+      "cardAnimation": "/documents/04-operations-review.json",
+      "cardAnimationLabel": "Operations Review: cycle time down 32% vs. last quarter. 12 KPIs, 4 accountable owners.",
+      "heroPhoto": {
+        "file": "arcline-services-operations-performance-hero-photo.webp",
+        "alt": "Operations team working through a process around a table with laptops"
+      },
+      "typicalDuration": "10–14 weeks",
+      "team": "1 partner + 3 operations consultants",
+      "engagementModel": "Diagnostic then implementation",
+      "idealFor": "Multi-site and service businesses",
+      "challenges": [
+        {
+          "title": "Slow Cycle Times",
+          "text": "Work waits in queues between teams, so customers feel delays that no single owner can fix."
+        },
+        {
+          "title": "Rising Cost to Serve",
+          "text": "Headcount grows faster than revenue because effort is spent on rework and workarounds."
+        },
+        {
+          "title": "Metrics Without Owners",
+          "text": "Dashboards report dozens of KPIs, yet nobody is accountable for moving the ones that matter."
+        }
+      ],
+      "brief": {
+        "title": "Operations Review",
+        "tag": "Q3",
+        "label": "Cycle time",
+        "value": "Down 32% versus last quarter",
+        "status": "Improving"
+      },
+      "headline": {
+        "lead": "Operations &",
+        "accent": "Performance"
+      },
+      "statement": {
+        "start": "Better operations come from ",
+        "accent": "fewer handoffs",
+        "end": ", not more effort."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Redesign processes, structures and KPIs so the organization delivers more with less friction."
+      }
+    },
+    {
+      "title": "Digital Transformation",
+      "slug": "digital-transformation",
+      "number": 4,
+      "sortOrder": 4,
+      "summary": "Modernize systems and ways of working around outcomes — not technology for its own sake.",
+      "heroSummary": "We plan and run transformation programs that tie every system, squad and release to a business outcome you can measure.",
+      "cardVisual": {
+        "file": "services-transformation-roadmap.webp",
+        "alt": "Digital Transformation card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-transformation.webp",
+        "alt": "Transformation roadmap card showing 68 percent complete in wave 2 of 3"
+      },
+      "cardAnimation": "/documents/05-transformation-roadmap.json",
+      "cardAnimationLabel": "Transformation Roadmap: 68% complete, wave 2 of 3. 4 cross-functional squads. 68% shipped.",
+      "heroPhoto": {
+        "file": "arcline-services-digital-transformation-hero-photo.webp",
+        "alt": "Two colleagues looking at a data display on a wall"
+      },
+      "typicalDuration": "12–16 weeks per wave",
+      "team": "1 partner + 3–4 specialists",
+      "engagementModel": "Phased program or retainer",
+      "idealFor": "Mid-market to enterprise",
+      "challenges": [
+        {
+          "title": "Stalled Programs",
+          "text": "Large projects run past budget and deadline while the business case quietly slips away."
+        },
+        {
+          "title": "Disconnected Systems",
+          "text": "Data lives in silos, so teams rekey information and leaders argue about which number is right."
+        },
+        {
+          "title": "Low Adoption",
+          "text": "New tools go live, but old habits stay because ways of working were never redesigned."
+        }
+      ],
+      "brief": {
+        "title": "Transformation Roadmap",
+        "tag": "Wave 2",
+        "label": "Program progress",
+        "value": "68% complete across three waves",
+        "status": "On Track"
+      },
+      "headline": {
+        "lead": "Digital",
+        "accent": "Transformation"
+      },
+      "statement": {
+        "start": "Technology only transforms a business when ",
+        "accent": "outcomes",
+        "end": " lead the roadmap."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Modernize systems and ways of working around outcomes — not technology for its own sake."
+      }
+    },
+    {
+      "title": "Customer Experience",
+      "slug": "customer-experience",
+      "number": 5,
+      "sortOrder": 5,
+      "summary": "Map the journeys that matter and turn customer insight into loyalty and revenue.",
+      "heroSummary": "We combine research, data and design to fix the moments that shape loyalty, then connect each improvement to revenue.",
+      "cardVisual": {
+        "file": "services-customer-journey.webp",
+        "alt": "Customer Experience card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-customer.webp",
+        "alt": "Customer journey card showing NPS up 14 points since the redesign"
+      },
+      "cardAnimation": "/documents/06-customer-journey.json",
+      "cardAnimationLabel": "Customer Journey: NPS up 14 points since journey redesign. 1,240 interviews and signals.",
+      "heroPhoto": {
+        "file": "arcline-services-customer-experience-hero-photo.webp",
+        "alt": "Woman explaining customer feedback to a colleague at a table"
+      },
+      "typicalDuration": "8–12 weeks",
+      "team": "1 partner + 2 research and design leads",
+      "engagementModel": "Fixed scope or retainer",
+      "idealFor": "Consumer and B2B service brands",
+      "challenges": [
+        {
+          "title": "Rising Churn",
+          "text": "Customers leave quietly, and the reasons only surface in exit surveys when it is too late."
+        },
+        {
+          "title": "Fragmented Journeys",
+          "text": "Each channel works on its own, so customers repeat themselves at every handoff."
+        },
+        {
+          "title": "Unclear Feedback",
+          "text": "Survey scores move, but no one can link them to the changes that would grow revenue."
+        }
+      ],
+      "brief": {
+        "title": "Customer Journey",
+        "tag": "Q4",
+        "label": "Net Promoter Score",
+        "value": "Up 14 points since the redesign",
+        "status": "Improving"
+      },
+      "headline": {
+        "lead": "Customer",
+        "accent": "Experience"
+      },
+      "statement": {
+        "start": "Loyalty is earned in a ",
+        "accent": "handful of moments",
+        "end": " — we help you win them."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Map the journeys that matter and turn customer insight into loyalty and revenue."
+      }
+    },
+    {
+      "title": "Growth & Market Strategy",
+      "slug": "growth-market-strategy",
+      "number": 6,
+      "sortOrder": 6,
+      "summary": "Find and prioritize the markets, segments and offers with the strongest path to growth.",
+      "heroSummary": "We size the opportunity, choose the markets and segments worth winning, and build the go-to-market plan to capture them.",
+      "cardVisual": {
+        "file": "services-growth-plan.webp",
+        "alt": "Growth & Market Strategy card visual"
+      },
+      "cardVisualLight": {
+        "file": "home-v3-svc-growth.webp",
+        "alt": "Growth plan card showing the addressable opportunity across target markets"
+      },
+      "cardAnimation": "/documents/07-growth-plan.json",
+      "cardAnimationLabel": "Growth Plan: $28M addressable opportunity across 3 markets. Expand in DACH first.",
+      "heroPhoto": {
+        "file": "arcline-services-growth-market-strategy-hero-photo.webp",
+        "alt": "Consultant and client reviewing a market plan on a laptop"
+      },
+      "typicalDuration": "8–12 weeks",
+      "team": "1 partner + 2–3 consultants",
+      "engagementModel": "Fixed scope with launch support",
+      "idealFor": "Companies entering new markets",
+      "challenges": [
+        {
+          "title": "Flat Pipeline",
+          "text": "Core markets are maturing, and new demand is not arriving fast enough to hit the targets."
+        },
+        {
+          "title": "Scattered Bets",
+          "text": "Teams test many markets at once, so no single opportunity gets the focus it needs to win."
+        },
+        {
+          "title": "Weak Positioning",
+          "text": "Prospects see you as one of many options because the offer is not tailored to their needs."
+        }
+      ],
+      "brief": {
+        "title": "Growth Plan",
+        "tag": "FY27",
+        "label": "Addressable opportunity",
+        "value": "28M across three target markets",
+        "status": "Priority"
+      },
+      "headline": {
+        "lead": "Growth & Market",
+        "accent": "Strategy"
+      },
+      "statement": {
+        "start": "Growth comes from choosing the ",
+        "accent": "right markets",
+        "end": ", not chasing every one."
+      },
+      "seo": {
+        "metaTitle": null,
+        "metaDescription": "Find and prioritize the markets, segments and offers with the strongest path to growth."
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+---
+import LinkButton from '../../ui/LinkButton.astro';
+import CaseStudyCardHomeV2Tall from '../../cards/CaseStudyCardHomeV2Tall.astro';
+import CaseStudyCardHomeV2 from '../../cards/CaseStudyCardHomeV2.astro';
+import { getCaseStudies } from '../../../lib/cms';
+
+const caseStudies = await getCaseStudies();
+const list6 = caseStudies.slice(0, 1);
+const list7 = caseStudies.slice(1, 2);
+const list8 = caseStudies.slice(2, 3);
+const list9 = caseStudies.slice(3, 4);
+---
+
+<section class="section_home-v2-cases">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="home-v2-cases-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow">
+                    <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label">Selected Work</div>
+                  </div>
+                  <h2 class="heading-style-2 section-header-heading">Work That Creates Measurable Impact</h2>
+                  <div class="section-header-doodle is-pos-cases w-embed"><svg width="100%" height="100%" viewBox="0 0 45 50" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 27C3.3557 18.4591 6.90298 10.3881 9 2" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                      <path d="M17.5 32C25.9926 27.1537 34.4984 22.3305 43 17.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                      <path d="M19.8228 47.1832C26.5813 47.234 33.3158 47.9922 40.048 47.9922" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                    </svg></div>
+                </div>
+                <div class="section-header-summary-block is-spaced">
+                  <p class="home-cases-disclaimer">Projects and metrics shown are illustrative.</p>
+                  <LinkButton href="/case-studies">All Case Studies</LinkButton>
+                </div>
+              </div>
+              <div class="home-v2-cases-grid">
+                <div class="home-v2-cases-row">
+                  <div class="home-v2-cases-slot is-a w-dyn-list">{list6.length > 0 ? (<div role="list" class="w-dyn-items">{list6.map((item) => (<div role="listitem" class="w-dyn-item"><CaseStudyCardHomeV2Tall item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                      <div>No items found.</div>
+                    </div>)}</div>
+                  <div class="home-v2-cases-slot is-b w-dyn-list">{list7.length > 0 ? (<div role="list" class="w-dyn-items">{list7.map((item) => (<div role="listitem" class="w-dyn-item"><CaseStudyCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                      <div>No items found.</div>
+                    </div>)}</div>
+                </div>
+                <div class="home-v2-cases-row">
+                  <div class="home-v2-cases-slot is-c w-dyn-list">{list8.length > 0 ? (<div role="list" class="w-dyn-items">{list8.map((item) => (<div role="listitem" class="w-dyn-item"><CaseStudyCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                      <div>No items found.</div>
+                    </div>)}</div>
+                  <div class="home-v2-cases-slot is-d w-dyn-list">{list9.length > 0 ? (<div role="list" class="w-dyn-items">{list9.map((item) => (<div role="listitem" class="w-dyn-item"><CaseStudyCardHomeV2Tall item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                      <div>No items found.</div>
+                    </div>)}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

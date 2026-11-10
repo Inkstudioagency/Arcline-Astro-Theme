@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseDetailsHero from '../../components/sections/case-study/CaseDetailsHero.astro';
+import CaseDetailsContent from '../../components/sections/case-study/CaseDetailsContent.astro';
+import CaseDetailsQuote from '../../components/sections/case-study/CaseDetailsQuote.astro';
+import CaseDetailsRelated from '../../components/sections/case-study/CaseDetailsRelated.astro';
+import type { CaseStudy } from '../../lib/cms';
+import { getCaseStudies, mediaSrc } from '../../lib/cms';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCaseStudies();
+  return entries.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  item: CaseStudy;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.seo?.metaTitle || `${item.title} | Arcline`} description={item.seo?.metaDescription || item.summary || undefined} image={mediaSrc(item.mainImage)} type="website" wfPage="6ae01a7f1c9c9a2fe5aebd55">
+  <CaseDetailsHero item={item} />
+  <CaseDetailsContent item={item} />
+  <CaseDetailsQuote item={item} />
+  <CaseDetailsRelated />
+</BaseLayout>

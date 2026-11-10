@@ -1,0 +1,68 @@
+---
+import type { CaseStudy } from '../../../lib/cms';
+import { mediaAlt, mediaSrc } from '../../../lib/cms';
+
+interface Props {
+  item: CaseStudy;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_case-details-hero">
+        <div class="about-hero-mark w-embed"><svg width="100%" height="100%" viewBox="0 0 796 796" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="arcline-case-mark-fade" x1="487.5" y1="469.5" x2="498" y2="775" gradientUnits="userSpaceOnUse">
+                <stop stop-color="currentColor" stop-opacity="0.04"></stop>
+                <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M320.355 7.64755C397.559 -7.70923 477.583 0.172485 550.308 30.296C623.033 60.4196 685.192 111.432 728.925 176.883C772.658 242.334 796 319.283 796 398H604.96C604.96 357.067 592.822 317.054 570.081 283.02C547.34 248.985 515.017 222.458 477.2 206.794C439.383 191.13 397.77 187.031 357.624 195.017C317.478 203.002 280.601 222.713 251.657 251.657C222.713 280.601 203.002 317.478 195.017 357.624C187.031 397.77 191.13 439.383 206.794 477.2C222.458 515.017 248.985 547.34 283.02 570.081C317.054 592.822 357.067 604.96 398 604.96V796C319.283 796 242.334 772.658 176.883 728.925C111.432 685.192 60.4196 623.033 30.296 550.308C0.172484 477.583 -7.70923 397.559 7.64755 320.355C23.0045 243.15 60.9101 172.233 116.571 116.571C172.233 60.9101 243.15 23.0045 320.355 7.64755ZM625.428 511.714C688.23 511.714 739.143 562.626 739.143 625.429C739.143 688.231 688.23 739.143 625.428 739.143C562.625 739.142 511.714 688.231 511.714 625.429C511.714 562.626 562.625 511.714 625.428 511.714Z" fill="url(#arcline-case-mark-fade)"></path>
+          </svg></div>
+        <div class="container-main">
+          <div class="about-hero-wrapper">
+            <div class="about-hero-intro">
+              <div class="about-hero-heading-group">
+                <div class="blog-details-breadcrumb">
+                  <a href="/" class="blog-details-crumb-link">Home</a>
+                  <div class="blog-details-crumb-divider">/</div>
+                  <a href="/case-studies" class="blog-details-crumb-link">Case Studies</a>
+                  <div class="blog-details-crumb-divider">/</div>
+                  <div class="blog-details-crumb-current">{item.title}</div>
+                </div>
+                <div class="about-hero-meta">
+                  <div class="section-eyebrow is-white">
+                    <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label is-white">Case Study Details</div>
+                  </div>
+                  <div class="about-hero-chip is-case">{item.industry}</div>
+                </div>
+                <h1 class="home-hero-heading is-about"><span class="case-details-title-part">{item.headline?.lead}</span><span class="case-details-title-part"> </span><span class="case-details-title-accent"><span class="case-details-title-part">{item.headline?.accent}</span><svg viewBox="0 0 270 18" preserveAspectRatio="none" fill="none" aria-hidden="true" class="case-details-title-underline">
+                      <path d="M4 9.00019C70 5.00019 160 4.00019 266 7.00019" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                      <path d="M44 15C120 11 200 10 246 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                    </svg></span></h1>
+              </div>
+              <p class="about-hero-summary is-detail">{item.summary}</p>
+            </div>
+            <div class="about-hero-media"><img src={mediaSrc(item.mainImage)} loading="lazy" alt={mediaAlt(item.mainImage)} class="about-hero-image" />
+              <div class="case-details-hero-note">
+                <div class="home-cases-card-note-label">{item.resultLabel}</div>
+                <div class="home-cases-card-note-row">
+                  <div class="home-cases-card-note-value-group">
+                    <div class="home-cases-card-note-value">{item.resultValue}</div>
+                    <div class="home-cases-card-trend"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 8 8" height="100%" width="100%" class="home-cases-card-trend-icon home-cases-card-trend-icon">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="0.67" stroke="currentColor" d="M5.67 5.67V2.33H2.33M5.67 2.33L2.33 5.67"></path>
+                      </svg>
+                      <div class="home-cases-card-trend-text">{item.resultChange}</div>
+                    </div>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 58 33" height="100%" width="100%" class="home-cases-card-chart home-cases-card-chart">
+                    <path stroke-linecap="round" stroke-width="2" stroke-opacity="0.6" stroke="currentColor" d="M1 32L15 21H35L42 9.5L57 1"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

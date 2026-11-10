@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": "Advisory services: /services, home pages, the header menu, the contact form and /service/[slug]. Ordered by sortOrder."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "required": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "summary": {
+      "type": "text"
+    },
+    "heroSummary": {
+      "type": "text"
+    },
+    "cardVisual": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cardVisualLight": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cardAnimation": {
+      "type": "string"
+    },
+    "cardAnimationLabel": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "heroPhoto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "typicalDuration": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "engagementModel": {
+      "type": "string"
+    },
+    "idealFor": {
+      "type": "string"
+    },
+    "challenges": {
+      "type": "component",
+      "component": "shared.titled-text",
+      "repeatable": true,
+      "max": 3
+    },
+    "brief": {
+      "type": "component",
+      "component": "service.brief",
+      "repeatable": false
+    },
+    "headline": {
+      "type": "component",
+      "component": "shared.headline",
+      "repeatable": false
+    },
+    "statement": {
+      "type": "component",
+      "component": "shared.statement",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

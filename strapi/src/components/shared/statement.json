@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_statements",
+  "info": {
+    "displayName": "Statement",
+    "icon": "quote",
+    "description": "A sentence with one highlighted phrase (start + accent + end)."
+  },
+  "attributes": {
+    "start": {
+      "type": "text",
+      "required": true
+    },
+    "accent": {
+      "type": "string"
+    },
+    "end": {
+      "type": "text"
+    }
+  }
+}

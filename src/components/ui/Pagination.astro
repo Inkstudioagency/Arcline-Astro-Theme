@@ -1,0 +1,18 @@
+---
+// Previous / Next links for a paginated collection list (Webflow pagination markup).
+// Pages come from Astro's paginate() in the listing route (e.g. src/pages/blog-v2/[...page].astro).
+// The markup is kept on single lines on purpose: whitespace between the inline children would shift the layout.
+import type { Page } from 'astro';
+
+interface Props {
+  page: Page<unknown>;
+}
+
+const { page } = Astro.props;
+const prevIcon =
+  '<svg class="w-pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)"><path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path></svg>';
+const nextIcon =
+  '<svg class="w-pagination-next-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)"><path fill="none" stroke="currentColor" fill-rule="evenodd" d="M4 2l4 4-4 4"></path></svg>';
+---
+
+<div role="navigation" aria-label="Pagination" class="w-pagination-wrapper blog-pagination">{page.url.prev && <a href={page.url.prev} aria-label="Previous Page" class="w-pagination-previous blog-pagination-button"><Fragment set:html={prevIcon} /><div class="w-inline-block">Previous</div></a>}{page.url.next && <a href={page.url.next} aria-label="Next Page" class="w-pagination-next blog-pagination-button"><div class="w-inline-block">Next</div><Fragment set:html={nextIcon} /></a>}</div>

@@ -1,0 +1,38 @@
+---
+import ServiceListCard from '../../cards/ServiceListCard.astro';
+import { getServices } from '../../../lib/cms';
+
+const services = await getServices();
+const list0 = services;
+---
+
+<section class="section_services-list">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="home-services-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 20 20" height="100%" width="100%" class="section-eyebrow-icon section-eyebrow-icon">
+                      <path fill="currentColor" d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z"></path>
+                    </svg>
+                    <div class="section-eyebrow-label">What We Do</div>
+                  </div>
+                  <h2 class="heading-style-2 section-header-heading">Six Practices, One Integrated Team</h2><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 45 50" height="100%" width="100%" class="section-header-doodle is-pos-practices section-header-doodle">
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M2 27C3.3557 18.4591 6.90298 10.3881 9 2"></path>
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M17.5 32C25.9926 27.1537 34.4984 22.3305 43 17.5"></path>
+                    <path stroke-linecap="round" stroke-width="3" stroke="currentColor" d="M19.8228 47.1832C26.5813 47.234 33.3158 47.9922 40.048 47.9922"></path>
+                  </svg>
+                </div>
+                <div class="section-header-summary-block">
+                  <p class="text-size-regular">Engage one practice for a focused problem, or combine several when the pressure spans finance, operations and growth.</p>
+                </div>
+              </div>
+              <div class="services-list-block">
+                <div class="w-dyn-list">{list0.length > 0 ? (<div role="list" class="home-services-list w-dyn-items">{list0.map((item) => (<div role="listitem" class="home-services-item w-dyn-item"><ServiceListCard item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

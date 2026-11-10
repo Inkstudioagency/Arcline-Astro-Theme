@@ -1,0 +1,41 @@
+---
+// Text link with an arrow (Webflow "Link Button" component). The hover slide is an IX3 interaction that finds the
+// parts through the data-wf-component-id / data-wf-target attributes — keep them.
+import type { HTMLAttributes } from 'astro/types';
+import { currentLink } from '../../lib/nav';
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'class'> {
+  href: string;
+  class?: string;
+}
+
+const COMPONENT = '17711c07-3c74-543b-c3b3-7efac56b9b22';
+// Each rendered button is its own component instance (Webflow keeps an instance path next to the element id;
+// IX3 only attaches interactions to elements that have one).
+const instance = crypto.randomUUID();
+const target = (element: string) => JSON.stringify([[[COMPONENT, element], [instance]]]);
+
+const { href, class: className, ...rest } = Astro.props;
+const label = await Astro.slots.render('default');
+const { isCurrent, ariaCurrent } = currentLink(Astro.url);
+---
+
+<a
+  data-wf-target={target(COMPONENT)}
+  data-wf-component-id={COMPONENT}
+  data-wf-variant-state="base"
+  href={href}
+  aria-current={ariaCurrent(href)}
+  class:list={['link-button', className, 'w-inline-block', isCurrent(href) && 'w--current']}
+  {...rest}
+>
+  <div class="button-text-mask">
+    <div data-wf-target={target('17711c07-3c74-543b-c3b3-7efac56b9b24')} class="button-text" set:html={label} />
+    <div aria-hidden="true" data-wf-target={target('17711c07-3c74-543b-c3b3-7efac56b9b25')} class="button-text is-hover" set:html={label} />
+  </div>
+  <div data-wf-target={target('51c84786-d801-0253-396d-8fb686918eb6')} class="link-button-icon w-embed">
+    <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.5 8H13.5M9 3.5L13.5 8L9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+</a>

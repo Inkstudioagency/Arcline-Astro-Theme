@@ -1,0 +1,50 @@
+/*
+ * Theme additions. The original Webflow stylesheets (normalize.css, webflow.css,
+ * arcline.webflow.css) are kept unchanged. Put new or overriding rules here.
+ */
+
+/* Honeypot field added to forms for spam protection (not part of the visual design). */
+.form-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Accessibility helpers (invisible unless focused by keyboard / read by a screen reader). */
+.visually-hidden,
+.skip-link:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #0b0b0b;
+  font-weight: 500;
+  text-decoration: none;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+main:focus {
+  outline: none;
+}
+
+/* webflow.css removes the focus outline from dropdown toggles; restore it for keyboard users only. */
+.w-dropdown-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

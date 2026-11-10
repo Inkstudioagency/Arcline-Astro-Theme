@@ -1,0 +1,92 @@
+---
+import type { Page } from 'astro';
+import BlogCardV2 from '../../cards/BlogCardV2.astro';
+import Pagination from '../../ui/Pagination.astro';
+import type { BlogPost } from '../../../lib/cms';
+import { getBlogPosts, whereEquals } from '../../../lib/cms';
+
+interface Props {
+  page: Page<BlogPost>;
+}
+
+const { page } = Astro.props;
+
+const posts = await getBlogPosts();
+const list0 = page.data;
+const list1 = whereEquals(posts, 'category', 'Strategy');
+const list2 = whereEquals(posts, 'category', 'Finance');
+const list3 = whereEquals(posts, 'category', 'Operations');
+const list4 = whereEquals(posts, 'category', 'Growth');
+---
+
+<section class="section_blog-v2-list">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="blog-v2-wrapper">
+              <div class="section-header is-center">
+                <div class="section-header-title-block is-center">
+                  <div class="section-eyebrow">
+                    <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label">Blog</div>
+                  </div>
+                  <h1 class="heading-style-2 section-header-heading">Latest <span class="heading-accent">Articles<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" preserveAspectRatio="none" viewBox="0 0 270 18" height="100%" width="100%" class="heading-accent-line is-blue is-pos-latest heading-accent-line is-blue">
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M4 9C70 5 160 4 266 7"></path>
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M44 15C120 11 200 10 246 12"></path>
+                      </svg></span></h1>
+                </div>
+                <div class="section-header-summary-block is-center">
+                  <p class="text-size-regular">Search 120+ articles, guides and briefings on strategy, operations, finance and growth.</p>
+                </div>
+              </div>
+              <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="blog-v2-content w-tabs">
+                <div class="blog-v2-filter w-tab-menu">
+                  <a data-w-tab="Tab 1" class="blog-v2-filter-tab is-active w-inline-block w-tab-link w--current">
+                    <div>All</div>
+                  </a>
+                  <a data-w-tab="Tab 2" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Strategy</div>
+                  </a>
+                  <a data-w-tab="Tab 3" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Finance</div>
+                  </a>
+                  <a data-w-tab="Tab 4" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Operations</div>
+                  </a>
+                  <a data-w-tab="Tab 5" class="blog-v2-filter-tab w-inline-block w-tab-link">
+                    <div>Growth</div>
+                  </a>
+                </div>
+                <div class="blog-v2-panels w-tab-content">
+                  <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                    <div class="blog-v2-panel w-dyn-list">{list0.length > 0 ? (<div role="list" class="blog-v2-list w-dyn-items">{list0.map((item) => (<div role="listitem" class="blog-v2-item w-dyn-item"><BlogCardV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}<Pagination page={page} /></div>
+                  </div>
+                  <div data-w-tab="Tab 2" class="w-tab-pane">
+                    <div class="blog-v2-panel w-dyn-list">{list1.length > 0 ? (<div role="list" class="blog-v2-list w-dyn-items">{list1.map((item) => (<div role="listitem" class="blog-v2-item w-dyn-item"><BlogCardV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 3" class="w-tab-pane">
+                    <div class="blog-v2-panel w-dyn-list">{list2.length > 0 ? (<div role="list" class="blog-v2-list w-dyn-items">{list2.map((item) => (<div role="listitem" class="blog-v2-item w-dyn-item"><BlogCardV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 4" class="w-tab-pane">
+                    <div class="blog-v2-panel w-dyn-list">{list3.length > 0 ? (<div role="list" class="blog-v2-list w-dyn-items">{list3.map((item) => (<div role="listitem" class="blog-v2-item w-dyn-item"><BlogCardV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div data-w-tab="Tab 5" class="w-tab-pane">
+                    <div class="blog-v2-panel w-dyn-list">{list4.length > 0 ? (<div role="list" class="blog-v2-list w-dyn-items">{list4.map((item) => (<div role="listitem" class="blog-v2-item w-dyn-item"><BlogCardV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

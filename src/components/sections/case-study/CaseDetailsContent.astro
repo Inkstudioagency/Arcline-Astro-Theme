@@ -1,0 +1,86 @@
+---
+import Button from '../../ui/Button.astro';
+import type { CaseStudy } from '../../../lib/cms';
+import { mediaAlt, mediaSrc } from '../../../lib/cms';
+
+interface Props {
+  item: CaseStudy;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_case-details-content">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="blog-details-content-grid">
+              <div class="blog-details-article">
+                <div class="section-eyebrow">
+                  <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                    </svg></div>
+                  <div class="section-eyebrow-label">Overview</div>
+                </div>
+                <div class="case-details-intro">
+                  <h2 class="case-details-statement"><span class="case-details-title-part">{item.statement?.start}</span> <span class="case-details-statement-accent"><span class="case-details-title-part">{item.statement?.accent}</span><svg viewBox="0 0 161 45" preserveAspectRatio="none" fill="none" aria-hidden="true" class="case-details-statement-circle">
+                        <path d="M99.958 6.48637C118.176 3.98546 135.538 4.16691 150.915 10.2553C162.799 14.9611 163.625 22.9178 149.81 29.6902C136.434 36.2375 115.45 39.2202 98.4181 41.1674C80.5005 43.2099 62.1538 44.3674 44.9074 43.8949C29.8921 43.4879 12.5195 42.0819 4.38463 36.6074C-1.2245 32.8108 0.613744 27.6049 6.41502 22.918C21.43 10.7959 54.9957 2.6657 82.1299 1.20441C103.85 0.0346967 117.192 3.98546 131.647 10.4878" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                      </svg></span><span class="case-details-title-part"> </span><span class="case-details-title-part">{item.statement?.end}</span></h2>
+                  <p class="case-details-intro-text">{item.intro}</p>
+                </div><img src={mediaSrc(item.overviewImage)} loading="lazy" alt={mediaAlt(item.overviewImage)} class="case-details-image" />
+                <h3 class="case-details-section-title">{item.sectionTitle}</h3>
+                <p class="case-details-section-text">{item.sectionText}</p>
+                <div class="case-details-stats">
+                  <div class="case-details-stat is-first">
+                    <div data-counter="counter" class="case-details-stat-value">{item.stats[0]?.value}</div>
+                    <div class="case-details-stat-label">{item.stats[0]?.label}</div>
+                  </div>
+                  <div class="case-details-stat">
+                    <div data-counter="counter" class="case-details-stat-value">{item.stats[1]?.value}</div>
+                    <div class="case-details-stat-label">{item.stats[1]?.label}</div>
+                  </div>
+                  <div class="case-details-stat">
+                    <div data-counter="counter" class="case-details-stat-value">{item.stats[2]?.value}</div>
+                    <div class="case-details-stat-label">{item.stats[2]?.label}</div>
+                  </div>
+                </div>
+                <div class="case-details-collage">
+                  <div class="case-details-collage-column"><img src={mediaSrc(item.collage?.[0])} loading="lazy" alt={mediaAlt(item.collage?.[0])} class="case-details-collage-image is-tall" /><img src={mediaSrc(item.collage?.[1])} loading="lazy" alt={mediaAlt(item.collage?.[1])} class="case-details-collage-image" /></div>
+                  <div class="case-details-collage-column"><img src={mediaSrc(item.collage?.[2])} loading="lazy" alt={mediaAlt(item.collage?.[2])} class="case-details-collage-image" /><img src={mediaSrc(item.collage?.[3])} loading="lazy" alt={mediaAlt(item.collage?.[3])} class="case-details-collage-image is-tall" /></div>
+                </div>
+              </div>
+              <aside class="blog-details-sidebar">
+                <div class="case-details-facts">
+                  <div class="case-details-fact is-first">
+                    <div class="case-details-fact-label">Client</div>
+                    <div class="case-details-fact-value">{item.client}</div>
+                  </div>
+                  <div class="case-details-fact">
+                    <div class="case-details-fact-label">Industry</div>
+                    <div class="case-details-fact-value">{item.industry}</div>
+                  </div>
+                  <div class="case-details-fact">
+                    <div class="case-details-fact-label">Services</div>
+                    <div class="case-details-fact-value">{item.services}</div>
+                  </div>
+                  <div class="case-details-fact">
+                    <div class="case-details-fact-label">Timeline</div>
+                    <div class="case-details-fact-value">{item.timeline}</div>
+                  </div>
+                  <div class="case-details-fact">
+                    <div class="case-details-fact-label">Team</div>
+                    <div class="case-details-fact-value">{item.team}</div>
+                  </div>
+                </div>
+                <div class="home-faq-cta-card">
+                  <div class="home-faq-avatars"><img src="/images/arcline-faq-avatar-1.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-2.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-3.webp" loading="lazy" alt="" class="home-faq-avatar" /></div>
+                  <div class="home-faq-cta-text">
+                    <h3 class="home-faq-cta-title">Still have a question?</h3>
+                    <p class="home-faq-cta-summary">Speak directly with a partner. We reply within one business day.</p>
+                  </div>
+                  <Button href="/contact-v1">Start a Conversation</Button>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>

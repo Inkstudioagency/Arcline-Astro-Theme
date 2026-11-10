@@ -1,0 +1,24 @@
+<svg width="62" height="38" viewBox="0 0 62 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect width="62" height="38" rx="19" fill="url(#arcPillGrad)"/>
+<path d="M19 26L27 18L32 23L43 12M43 20V12H35" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+<defs>
+<radialGradient id="arcPillGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32.6814 -4.9672) rotate(90.4711) scale(47.5184 48.3417)">
+<stop stop-color="#000917"/>
+<stop offset="0.1" stop-color="#000D20"/>
+<stop offset="0.2" stop-color="#02122A"/>
+<stop offset="0.3" stop-color="#011742"/>
+<stop offset="0.4" stop-color="#01247B"/>
+<stop offset="0.5" stop-color="#153896"/>
+<stop offset="0.6" stop-color="#3055BA"/>
+<stop offset="0.7" stop-color="#4468C9"/>
+<stop offset="0.8" stop-color="#5879D0"/>
+<stop offset="0.84" stop-color="#6C89D9"/>
+<stop offset="0.88" stop-color="#86A1EA"/>
+<stop offset="0.92" stop-color="#B4C6F7"/>
+<stop offset="0.98" stop-color="#E7EEFF"/>
+<stop offset="1" stop-color="white"/>
+</radialGradient>
+</defs>
+</svg>

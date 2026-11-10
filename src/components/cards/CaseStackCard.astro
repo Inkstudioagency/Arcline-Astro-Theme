@@ -1,0 +1,85 @@
+---
+// Case study card with text on the left and the photo + result note on the right (Home V1 stacked cards,
+// Case Studies hero, case study and service detail pages).
+import type { CaseStudy } from '../../lib/cms';
+import { caseStudyUrl, mediaAlt, mediaSrc, pad2 } from '../../lib/cms';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  item: CaseStudy;
+  /** Heading level of the card title (h2 when the cards are the page's main list). */
+  headingTag?: 'h2' | 'h3';
+  /** Photo alt text: the case study title, or the alt text stored on the image in the CMS. */
+  imageAlt?: 'title' | 'media';
+  /**
+   * Animated result note (Lottie JSON in public/documents) shown instead of the note built from the item's
+   * result fields. Home V1 uses it for its first three cards.
+   */
+  noteAnimation?: { src: string; label: string };
+}
+
+const { item, headingTag: Heading = 'h3', imageAlt = 'title', noteAnimation } = Astro.props;
+const url = caseStudyUrl(item);
+---
+
+<div class="home-cases-card">
+  <div class="home-cases-card-content">
+    <div class="home-cases-card-top">
+      <div class="home-cases-card-meta">
+        <div class="home-cases-card-number">{pad2(item.caseNumber)}</div>
+        <div class="home-cases-card-dot">•</div>
+        <div class="home-cases-card-industry">{item.industry}</div>
+      </div>
+      <a href={url} class="home-cases-card-title-link w-inline-block">
+        <Heading class="home-cases-card-title">{item.title}</Heading>
+      </a>
+      <p class="home-cases-card-summary">{item.summary}</p>
+    </div>
+    <Button href={url} variant="secondary">View Case Study</Button>
+  </div>
+  <a href={url} tabindex="-1" aria-hidden="true" class="home-cases-card-image-link w-inline-block"
+    ><img
+      src={mediaSrc(item.mainImage)}
+      loading="lazy"
+      alt={imageAlt === 'title' ? item.title : mediaAlt(item.mainImage)}
+      class="home-cases-card-image"
+    />
+    {
+      noteAnimation ? (
+        <div
+          aria-label={noteAnimation.label}
+          role="img"
+          class="cases-note-lottie"
+          data-animation-type="lottie"
+          data-src={noteAnimation.src}
+          data-loop="0"
+          data-direction="1"
+          data-autoplay="1"
+          data-is-ix2-target="0"
+          data-renderer="svg"
+          data-default-duration="0"
+          data-duration="0"
+          data-loading="lazy"
+        />
+      ) : (
+        <div class="home-cases-card-note">
+          <div class="home-cases-card-note-label">{item.resultLabel}</div>
+          <div class="home-cases-card-note-row">
+            <div class="home-cases-card-note-value-group">
+              <div class="home-cases-card-note-value">{item.resultValue}</div>
+              <div class="home-cases-card-trend">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 8 8" height="100%" width="100%" class="home-cases-card-trend-icon">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="0.67" stroke="currentColor" d="M5.67 5.67V2.33H2.33M5.67 2.33L2.33 5.67" />
+                </svg>
+                <div class="home-cases-card-trend-text">{item.resultChange}</div>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 58 33" height="100%" width="100%" class="home-cases-card-chart">
+              <path stroke-linecap="round" stroke-width="2" stroke-opacity="0.6" stroke="currentColor" d="M1 32L15 21H35L42 9.5L57 1" />
+            </svg>
+          </div>
+        </div>
+      )
+    }
+  </a>
+</div>

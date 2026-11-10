@@ -1,0 +1,98 @@
+---
+// Site footer. Text, contact details and social links come from src/config/site.ts; link columns from
+// src/config/navigation.ts.
+import NewsletterForm from '../ui/NewsletterForm.astro';
+import SocialIcon from '../ui/SocialIcon.astro';
+import { site } from '../../config/site';
+import { footerColumns, footerLegalLinks } from '../../config/navigation';
+import { currentLink } from '../../lib/nav';
+
+const { isCurrent, ariaCurrent } = currentLink(Astro.url);
+---
+
+<footer class="section_footer">
+  <div class="container-main">
+    <div class="footer-wrapper">
+      <div class="footer-cards">
+        <div class="footer-brand-card">
+          <a href="/" aria-label={`${site.name} home`} aria-current={ariaCurrent('/')} class:list={['footer-brand w-inline-block', isCurrent('/') && 'w--current']}
+            ><img src="/images/arcline-logo-white.svg" loading="lazy" alt={site.name} class="footer-logo" /></a
+          >
+          <div class="footer-brand-bottom">
+            <div class="footer-brand-text">
+              <div class="footer-tagline">{site.tagline}</div>
+              <p class="footer-brand-summary">{site.summary}</p>
+            </div>
+            <div class="footer-social-row">
+              <div class="footer-social-label">Stay in touch</div>
+              <div class="footer-social-list">
+                {
+                  site.social.map((social) => (
+                    <a href={social.href} aria-label={`${site.name} on ${social.label} (opens in a new tab)`} target="_blank" rel="noopener" class="footer-social-link">
+                      <div class="footer-social-icon w-embed">
+                        <SocialIcon name={social.icon} />
+                      </div>
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links-card">
+          <div class="footer-link-columns">
+            {
+              footerColumns.map((column) => (
+                <div class="footer-link-column">
+                  <div class="footer-column-title">{column.title}</div>
+                  {column.links.map((link) => (
+                    <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={['footer-link', isCurrent(link.href) && 'w--current']}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              ))
+            }
+            <div class="footer-link-column">
+              <div class="footer-column-title">Contact</div>
+              <a href={`mailto:${site.email}`} class="footer-link">{site.email}</a>
+              <a href={`tel:${site.phoneHref}`} class="footer-link">{site.phone}</a>
+              <div class="footer-contact-text">{site.location}</div>
+            </div>
+          </div>
+          <div class="footer-bottom-row">
+            <div class="footer-legal">
+              <div class="footer-legal-links">
+                {
+                  footerLegalLinks.map((link) => (
+                    <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={['footer-link', isCurrent(link.href) && 'w--current']}>
+                      {link.label}
+                    </a>
+                  ))
+                }
+              </div>
+              <div class="footer-copyright">{site.copyright}</div>
+              <div class="footer-credits">
+                Powered by <a href="https://astro.build" target="_blank" rel="noopener" class="footer-inline-link">Astro<span class="visually-hidden"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+            <div class="footer-newsletter">
+              <div class="footer-newsletter-copy">
+                <div class="footer-column-title">{site.newsletter.title}</div>
+                <div class="footer-newsletter-text">{site.newsletter.text}</div>
+              </div>
+              <NewsletterForm />
+            </div>
+          </div><img
+            src="/images/arcline-footer-badge-figma.webp"
+            loading="lazy"
+            sizes="(max-width: 628px) 100vw, 628px"
+            srcset="/images/arcline-footer-badge-figma-p-500.webp 500w, /images/arcline-footer-badge-figma.webp 628w"
+            alt=""
+            class="footer-badge"
+          />
+        </div>
+      </div><img src="/images/arcline-footer-wordmark.svg" loading="lazy" alt="" class="footer-wordmark" />
+    </div>
+  </div>
+</footer>

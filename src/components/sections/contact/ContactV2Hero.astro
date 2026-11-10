@@ -1,0 +1,85 @@
+---
+import { site } from '../../../config/site';
+---
+
+<section class="section_contact-v2-hero">
+        <div class="contact-hero-mark"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 796 796" height="100%" width="100%">
+            <defs>
+              <linearGradient gradientUnits="userSpaceOnUse" y2="775" x2="498" y1="469.5" x1="487.5" id="arcline-contact-mark-fade">
+                <stop stop-opacity="0.04" stop-color="currentColor"></stop>
+                <stop stop-opacity="0" stop-color="currentColor" offset="1"></stop>
+              </linearGradient>
+            </defs>
+            <path fill="url(#arcline-contact-mark-fade)" d="M320.355 7.64755C397.559 -7.70923 477.583 0.172485 550.308 30.296C623.033 60.4196 685.192 111.432 728.925 176.883C772.658 242.334 796 319.283 796 398H604.96C604.96 357.067 592.822 317.054 570.081 283.02C547.34 248.985 515.017 222.458 477.2 206.794C439.383 191.13 397.77 187.031 357.624 195.017C317.478 203.002 280.601 222.713 251.657 251.657C222.713 280.601 203.002 317.478 195.017 357.624C187.031 397.77 191.13 439.383 206.794 477.2C222.458 515.017 248.985 547.34 283.02 570.081C317.054 592.822 357.067 604.96 398 604.96V796C319.283 796 242.334 772.658 176.883 728.925C111.432 685.192 60.4196 623.033 30.296 550.308C0.172484 477.583 -7.70923 397.559 7.64755 320.355C23.0045 243.15 60.9101 172.233 116.571 116.571C172.233 60.9101 243.15 23.0045 320.355 7.64755ZM625.428 511.714C688.23 511.714 739.143 562.626 739.143 625.429C739.143 688.231 688.23 739.143 625.428 739.143C562.625 739.142 511.714 688.231 511.714 625.429C511.714 562.626 562.625 511.714 625.428 511.714Z"></path>
+          </svg></div>
+        <div class="container-main">
+          <div class="contact-hero-wrapper">
+            <div class="contact-hero-intro">
+              <div class="section-eyebrow is-white">
+                <div class="section-eyebrow-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 20 20" height="100%" width="100%">
+                    <path fill="currentColor" d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z"></path>
+                  </svg></div>
+                <div class="section-eyebrow-label is-white">Contact Us</div>
+              </div>
+              <div class="contact-hero-text">
+                <h1 class="home-hero-heading is-contact">Shape <span class="heading-accent">Tomorrow<span class="heading-accent-line is-yellow is-pos-contact-2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" preserveAspectRatio="none" viewBox="0 0 270 18" height="100%" width="100%">
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M4 9C70 5 160 4 266 7"></path>
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M44 15C120 11 200 10 246 12"></path>
+                      </svg></span></span> Together</h1>
+                <p class="contact-hero-summary">Share a bit about your company. A dedicated partner — not a sales rep — will get back to you within one business day.</p>
+              </div>
+            </div>
+            <div class="contact-info-grid">
+              <div class="contact-info-card">
+                <div class="contact-info-icon-tile">
+                  <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 32 32" height="100%" width="100%">
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M2.66667 8L11.884 13.2226C15.2821 15.148 16.7179 15.148 20.116 13.2226L29.3333 8"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M2.68769 17.9675C2.77485 22.0549 2.81844 24.0985 4.32661 25.6125C5.83477 27.1264 7.93377 27.1791 12.1318 27.2845C14.7191 27.3496 17.2809 27.3496 19.8683 27.2845C24.0663 27.1791 26.1652 27.1264 27.6735 25.6125C29.1816 24.0985 29.2252 22.0549 29.3123 17.9675C29.3404 16.6532 29.3404 15.3468 29.3123 14.0325C29.2252 9.94515 29.1816 7.90145 27.6735 6.38755C26.1652 4.87364 24.0663 4.82091 19.8683 4.71543C17.2809 4.65041 14.7191 4.65041 12.1318 4.71541C7.93377 4.82088 5.83477 4.87361 4.3266 6.38753C2.81843 7.90144 2.77485 9.94513 2.68768 14.0325C2.65965 15.3468 2.65967 16.6532 2.68769 17.9675Z"></path>
+                    </svg></div>
+                </div>
+                <div class="contact-info-text">
+                  <div class="contact-info-label">Email</div>
+                  <a href={`mailto:${site.email}`} class="contact-info-value is-link">{site.email}</a>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="contact-info-icon-tile">
+                  <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 32 32" height="100%" width="100%">
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M6.54915 14.0551L10.0697 10.5345C10.7879 9.81636 11.0364 8.75523 10.7459 7.78203C10.5188 7.02103 10.2629 6.10619 10.0928 5.32389C9.9355 4.60036 9.3006 4 8.56016 4H6.54915C5.06827 4 3.85215 5.20512 4.01459 6.67707C5.24946 17.8661 14.1339 26.7505 25.3229 27.9855C26.7949 28.1479 28 26.9317 28 25.4508V23.4399C28 22.6995 27.3972 22.092 26.6687 21.9595C25.8651 21.8133 25.0148 21.5739 24.3035 21.3471C23.2815 21.0212 22.1455 21.2503 21.3871 22.0087L17.9449 25.4508"></path>
+                    </svg></div>
+                </div>
+                <div class="contact-info-text">
+                  <div class="contact-info-label">Phone</div>
+                  <a href={`tel:${site.phoneHref}`} class="contact-info-value is-link">{site.phone}</a>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="contact-info-icon-tile">
+                  <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 32 32" height="100%" width="100%">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.6667 29.3333V10.6667C18.6667 6.89543 18.6667 5.00981 17.4951 3.83824C16.3235 2.66667 14.4379 2.66667 10.6667 2.66667C6.89543 2.66667 5.00981 2.66667 3.83824 3.83824C2.66667 5.00981 2.66667 6.89543 2.66667 10.6667V21.3333C2.66667 25.1045 2.66667 26.9901 3.83824 28.1617C5.00981 29.3333 6.89543 29.3333 10.6667 29.3333H18.6667Z"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M8.66667 14.6667H7.33333M14 14.6667H12.6667M8.66667 9.33333H7.33333M8.66667 20H7.33333M14 9.33333H12.6667M14 20H12.6667"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M24.6667 20H23.3333M24.6667 14.6667H23.3333"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M24 10.6667H18.6667V29.3333H24C26.5141 29.3333 27.7712 29.3333 28.5523 28.5523C29.3333 27.7712 29.3333 26.5141 29.3333 24V16C29.3333 13.4859 29.3333 12.2288 28.5523 11.4477C27.7712 10.6667 26.5141 10.6667 24 10.6667Z"></path>
+                    </svg></div>
+                </div>
+                <div class="contact-info-text">
+                  <div class="contact-info-label">Office</div>
+                  <div class="contact-info-value">New York, USA</div>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="contact-info-icon-tile">
+                  <div class="contact-info-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 32 32" height="100%" width="100%">
+                      <path stroke="currentColor" stroke-width="2" d="M29.3333 16C29.3333 23.3638 23.3638 29.3333 16 29.3333C8.6362 29.3333 2.66667 23.3638 2.66667 16C2.66667 8.6362 8.6362 2.66667 16 2.66667C23.3638 2.66667 29.3333 8.6362 29.3333 16Z"></path>
+                      <path stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" d="M16 10.6667V16L18.6667 18.6667"></path>
+                    </svg></div>
+                </div>
+                <div class="contact-info-text">
+                  <div class="contact-info-label">Hours</div>
+                  <div class="contact-info-value">Mon–Fri, 9am–6pm ET</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

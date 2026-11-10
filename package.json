@@ -1,0 +1,25 @@
+{
+  "name": "arcline-astro-theme",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.8"
+  },
+  "description": "Arcline: a consulting and advisory theme for Astro, with Strapi as the headless CMS.",
+  "license": "MIT",
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "typescript": "^6.0.3"
+  }
+}

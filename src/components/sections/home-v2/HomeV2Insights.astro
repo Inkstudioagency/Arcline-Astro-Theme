@@ -1,0 +1,82 @@
+---
+import BlogCardHomeV2 from '../../cards/BlogCardHomeV2.astro';
+import { getBlogPosts } from '../../../lib/cms';
+
+const posts = await getBlogPosts();
+const list10 = posts.slice(0, 1);
+const list11 = posts.slice(1, 2);
+const list12 = posts.slice(2, 3);
+const list13 = posts.slice(3, 4);
+const list14 = posts.slice(4, 5);
+const list15 = posts.slice(5, 6);
+---
+
+<section class="section_home-v2-insights">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="home-v2-insights-wrapper">
+              <div class="section-header">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow">
+                    <div class="section-eyebrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label">Insights</div>
+                  </div>
+                  <h2 class="heading-style-2 section-header-heading">Insights for Better Business <span class="heading-accent">Decisions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" preserveAspectRatio="none" viewBox="0 0 306 16" height="100%" width="100%" class="heading-accent-line is-pos-insights heading-accent-line">
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M1.42285 7.96246C96.6187 6.33255 202.147 3.51953 297.986 3.51953"></path>
+                        <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M109.064 12.4052C174.391 12.0302 239.535 10.753 304.576 9.7395"></path>
+                      </svg></span></h2>
+                </div>
+              </div>
+              <div data-delay="4000" data-animation="slide" class="home-v2-insights-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                <div class="home-v2-insights-slider-mask w-slider-mask">
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list10.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list10.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list11.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list11.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list12.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list12.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list13.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list13.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list14.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list14.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                  <div class="home-v2-insights-slide w-slide">
+                    <div class="w-dyn-list">{list15.length > 0 ? (<div role="list" class="home-v2-insights-list w-dyn-items">{list15.map((item) => (<div role="listitem" class="home-v2-insights-item w-dyn-item"><BlogCardHomeV2 item={item} /></div>))}</div>) : (<div class="w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>)}</div>
+                  </div>
+                </div>
+                <div class="home-cases-arrow is-v2-prev is-on-white w-slider-arrow-left">
+                  <div class="home-cases-arrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11 18C11 18 5 13.58 5 12C5 10.42 11 6 11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </div>
+                <div class="home-cases-arrow is-v2-next is-on-white w-slider-arrow-right">
+                  <div class="home-cases-arrow-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.5 12H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M13 18C13 18 19 13.58 19 12C19 10.42 13 6 13 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </div>
+                <div class="home-cases-slider-nav w-slider-nav w-round w-num"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

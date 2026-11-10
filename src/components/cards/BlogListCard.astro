@@ -1,0 +1,28 @@
+---
+import type { BlogPost } from '../../lib/cms';
+import { blogUrl, formatDate, mediaAlt, mediaSrc } from '../../lib/cms';
+import LinkButton from '../ui/LinkButton.astro';
+
+interface Props {
+  item: BlogPost;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="blog-card">
+                            <a href={blogUrl(item)} class="blog-card-image-wrapper is-blog w-inline-block"><img src={mediaSrc(item.mainImage)} loading="lazy" alt={mediaAlt(item.mainImage)} class="blog-card-image" /></a>
+                            <div class="blog-card-body">
+                              <div class="blog-card-meta">
+                                <div class="blog-card-tag">{item.category}</div>
+                                <div class="blog-card-meta-text">·</div>
+                                <div class="blog-card-meta-text">{formatDate(item.publishedDate)}</div>
+                                <div class="blog-card-meta-text">·</div>
+                                <div class="blog-card-meta-text">{item.readTime}</div>
+                              </div>
+                              <a href={blogUrl(item)} class="blog-card-title-block w-inline-block">
+                                <h3 class="blog-card-title is-blog">{item.title}</h3>
+                              </a>
+                              <LinkButton href={blogUrl(item)}>Read More</LinkButton>
+                            </div>
+                          </div>

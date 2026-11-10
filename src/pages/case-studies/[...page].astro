@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudiesHero from '../../components/sections/case-studies/CaseStudiesHero.astro';
+import CaseStudiesList from '../../components/sections/case-studies/CaseStudiesList.astro';
+import Cta from '../../components/sections/Cta.astro';
+import { getCaseStudies } from '../../lib/cms';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const caseStudies = await getCaseStudies();
+  return paginate(caseStudies, { pageSize: 6 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Case Studies - Work With Measurable Impact | Arcline" description="See how Arcline helps growing companies improve operations, customer experience and financial performance, with focused engagements and measurable results." wfPage="6ae2b0c5dd4c1af11b30e93f">
+  <CaseStudiesHero />
+  <CaseStudiesList page={page} />
+  <Cta />
+</BaseLayout>

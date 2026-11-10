@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogHero from '../../components/sections/blog-v1/BlogHero.astro';
+import BlogList from '../../components/sections/blog-v1/BlogList.astro';
+import Cta from '../../components/sections/Cta.astro';
+import { getBlogPosts } from '../../lib/cms';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getBlogPosts();
+  return paginate(posts.filter((post) => !post.featured), { pageSize: 6 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Blog V1 - Insights on Strategy and Growth | Arcline" description="Insights from the Arcline team on strategy, operations, finance and growth. Practical articles for leaders who want clearer decisions and measurable results." wfPage="6ae157ea777f477452c313d1">
+  <BlogHero />
+  <BlogList page={page} />
+  <Cta />
+</BaseLayout>

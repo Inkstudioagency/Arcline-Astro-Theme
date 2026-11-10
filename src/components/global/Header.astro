@@ -1,0 +1,204 @@
+---
+// Site header (Webflow "Navbar" component). Dropdowns and the mobile drawer are Webflow dropdowns (`w-dropdown`),
+// opened by the Webflow runtime. Menus live in src/config/navigation.ts; the Services dropdown lists the CMS services.
+import Button from '../ui/Button.astro';
+import { site } from '../../config/site';
+import {
+  detailLinks,
+  mainLinksAfter,
+  mainLinksBefore,
+  megaFeature,
+  megaGroups,
+  megaUtility,
+  mobileGroups,
+  mobileLinks,
+  primaryCta,
+  servicesIndexLink,
+  type NavGroup,
+} from '../../config/navigation';
+import { bySlugOrFirst, blogUrl, caseStudyUrl, getBlogPosts, getCaseStudies, getServices, serviceUrl } from '../../lib/cms';
+import { currentLink } from '../../lib/nav';
+
+interface Props {
+  /** `hero-fixed`: transparent header that sits over the full-bleed hero (Home V1, Home V3). */
+  variant?: 'base' | 'hero-fixed';
+}
+
+const { variant = 'base' } = Astro.props;
+const heroFixed = variant === 'hero-fixed';
+const variantClass = heroFixed ? 'w-variant-434e8be4-7393-861b-882d-f93ff1063831' : undefined;
+
+const [services, caseStudies, posts] = await Promise.all([getServices(), getCaseStudies(), getBlogPosts()]);
+const detailGroup: NavGroup = {
+  title: 'Detail Pages',
+  links: [
+    { label: detailLinks.service.label, entry: bySlugOrFirst(services, detailLinks.service.slug), url: serviceUrl },
+    { label: detailLinks.caseStudy.label, entry: bySlugOrFirst(caseStudies, detailLinks.caseStudy.slug), url: caseStudyUrl },
+    { label: detailLinks.blog.label, entry: bySlugOrFirst(posts, detailLinks.blog.slug), url: blogUrl },
+  ]
+    .filter((link) => link.entry)
+    .map((link) => ({ label: link.label, href: link.url(link.entry!) })),
+};
+
+const { isCurrent, ariaCurrent } = currentLink(Astro.url);
+const cls = (base: string, href: string, ...extra: (string | undefined)[]) => [base, ...extra, isCurrent(href) && 'w--current'];
+---
+
+<header data-wf--navbar--variant={variant} class:list={['navbar-component', variantClass]}>
+  <div class="container-main">
+    <div class="navbar-wrapper">
+      <a href="/" aria-label={`${site.name} home`} aria-current={ariaCurrent('/')} class:list={cls('navbar-brand', '/', 'w-inline-block')}
+        ><img src="/images/arcline-logo-white.svg" loading="lazy" alt={site.name} class="navbar-logo" /><img
+          src="/images/arcline-logo-dark.svg"
+          loading="lazy"
+          alt=""
+          class="navbar-logo-dark"
+        /></a
+      >
+      <div class="navbar-right">
+        <nav class="navbar-menu">
+          {
+            mainLinksBefore.map((link) => (
+              <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={cls('navbar-link', link.href, variantClass)}>
+                {link.label}
+              </a>
+            ))
+          }
+          <div data-hover="false" data-delay="0" class="navbar-dropdown w-dropdown">
+            <div class="navbar-dropdown-toggle w-dropdown-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+              <div class="navbar-dropdown-text">Services</div>
+              <div class="navbar-dropdown-icon w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 6C12 6 9.054 10 8 10C6.946 10 4 6 4 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <nav class="navbar-dropdown-list w-dropdown-list">
+              <a
+                href={servicesIndexLink.href}
+                aria-current={ariaCurrent(servicesIndexLink.href)}
+                class:list={cls('navbar-dropdown-link', servicesIndexLink.href, 'w-dropdown-link')}>{servicesIndexLink.label}</a
+              >
+              {
+                services.map((service) => (
+                  <a href={serviceUrl(service)} aria-current={ariaCurrent(serviceUrl(service))} class:list={cls('navbar-dropdown-link', serviceUrl(service))}>
+                    {service.title}
+                  </a>
+                ))
+              }
+            </nav>
+          </div>
+          {
+            mainLinksAfter.map((link) => (
+              <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={cls('navbar-link', link.href, variantClass)}>
+                {link.label}
+              </a>
+            ))
+          }
+          <div data-hover="false" data-delay="0" class="navbar-dropdown is-mega w-dropdown">
+            <div class="navbar-dropdown-toggle w-dropdown-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+              <div class="navbar-dropdown-text">Pages</div>
+              <div class="navbar-dropdown-icon w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 6C12 6 9.054 10 8 10C6.946 10 4 6 4 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <nav class="navbar-mega-list w-dropdown-list">
+              <div class="navbar-mega">
+                <div class="navbar-mega-links">
+                  {
+                    [...megaGroups, detailGroup, megaUtility].map((group) => (
+                      <div class="navbar-mega-group">
+                        <div class="navbar-mega-title">{group.title}</div>
+                        {group.links.map((link) => (
+                          <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={cls('navbar-mega-link', link.href)}>
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    ))
+                  }
+                </div>
+                <div class="navbar-mega-feature">
+                  <img
+                    src={megaFeature.image}
+                    loading="lazy"
+                    sizes="100vw"
+                    srcset={megaFeature.srcset}
+                    alt=""
+                    class="navbar-mega-feature-image"
+                  />
+                  <div class="navbar-mega-feature-title">{megaFeature.title}</div>
+                  <div class="navbar-mega-feature-text">{megaFeature.text}</div>
+                  <div class="navbar-mega-feature-action">
+                    <Button href={primaryCta.href} variant="primary">{primaryCta.label}</Button>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </nav>
+        <div class="navbar-actions">
+          <div class="navbar-cta">
+            <Button href={primaryCta.href} variant="light">{primaryCta.label}</Button>
+          </div>
+          <div class="navbar-cta-light">
+            <Button href={primaryCta.href} variant="blue">{primaryCta.label}</Button>
+          </div>
+          <div class="navbar-drawer-trigger">
+            <div data-hover="false" data-delay="0" class="navbar-mobile-dropdown w-dropdown">
+              <div aria-label="Open menu" class="navbar-menu-button w-dropdown-toggle" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                <div class="navbar-menu-icon w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8H20M4 16H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="navbar-drawer-list w-dropdown-list">
+                <a aria-label="Close menu" href="#close-menu" class="navbar-drawer-overlay w-inline-block"></a>
+                <div data-lenis-prevent="true" class="navbar-drawer">
+                  <div class="navbar-drawer-top">
+                    <a aria-label={`${site.name} home`} href="/" aria-current={ariaCurrent('/')} class:list={cls('w-inline-block', '/')}
+                      ><img src="/images/arcline-logo-dark.svg" loading="lazy" alt={site.name} class="navbar-drawer-logo" /></a
+                    >
+                    <a aria-label="Close menu" href="#close-menu" class="navbar-drawer-close w-inline-block">
+                      <div class="navbar-menu-icon w-embed">
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <nav class="navbar-mobile-links">
+                    {
+                      mobileLinks.map((link) => (
+                        <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={cls('navbar-mobile-link', link.href)}>
+                          {link.label}
+                        </a>
+                      ))
+                    }
+                  </nav>
+                  <div class="navbar-mobile-pages">
+                    {
+                      [...mobileGroups, detailGroup, megaUtility].map((group) => (
+                        <div class="navbar-mega-group">
+                          <div class="navbar-mega-title">{group.title}</div>
+                          {group.links.map((link) => (
+                            <a href={link.href} aria-current={ariaCurrent(link.href)} class:list={cls('navbar-mega-link', link.href)}>
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      ))
+                    }
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

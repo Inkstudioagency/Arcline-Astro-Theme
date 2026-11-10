@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/sections/home/HomeHero.astro';
+import HomeIntro from '../components/sections/home/HomeIntro.astro';
+import HomeMetrics from '../components/sections/home/HomeMetrics.astro';
+import HomeWhy from '../components/sections/home/HomeWhy.astro';
+import HomeServices from '../components/sections/home/HomeServices.astro';
+import HomeProcess from '../components/sections/home/HomeProcess.astro';
+import HomeCases from '../components/sections/home/HomeCases.astro';
+import HomeTestimonials from '../components/sections/home/HomeTestimonials.astro';
+import HomeInsights from '../components/sections/home/HomeInsights.astro';
+import HomeFaq from '../components/sections/home/HomeFaq.astro';
+import Cta from '../components/sections/Cta.astro';
+---
+
+<BaseLayout title="Arcline - Consulting Astro Theme" description="Arcline is a consulting Astro theme for strategy firms and advisors, with service pages, case studies, a blog and contact layouts built to win new clients." header="hero-fixed" wfPage="6ac750cf5496dc650fd87c86">
+  <HomeHero />
+  <div class="hero-overlap-wrapper">
+    <HomeIntro />
+    <HomeMetrics />
+    <HomeWhy />
+    <HomeServices />
+    <HomeProcess />
+    <HomeCases />
+    <HomeTestimonials />
+    <HomeInsights />
+    <HomeFaq />
+    <Cta />
+  </div>
+</BaseLayout>

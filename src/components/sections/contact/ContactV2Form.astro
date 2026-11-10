@@ -1,0 +1,41 @@
+---
+import Button from '../../ui/Button.astro';
+import ContactForm from '../../ui/ContactForm.astro';
+---
+
+<section class="section_contact-v2-form">
+        <div class="section-gap">
+          <div class="container-main">
+            <div class="contact-v2-form-wrapper">
+              <div class="home-faq-intro">
+                <div class="section-header-title-block">
+                  <div class="section-eyebrow">
+                    <div class="section-eyebrow-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 20 20" height="100%" width="100%">
+                        <path fill="currentColor" d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z"></path>
+                      </svg></div>
+                    <div class="section-eyebrow-label">Get In Touch</div>
+                  </div>
+                  <div class="home-faq-heading-block">
+                    <h2 class="heading-style-2 section-header-heading is-wide">Tell Us Where Your Business Is <span class="heading-accent">Headed<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none" fill="none" viewBox="0 0 306 16" height="100%" width="100%" class="heading-accent-line heading-accent-line">
+                          <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M1.42285 7.96246C96.6187 6.33255 202.147 3.51953 297.986 3.51953"></path>
+                          <path stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M109.064 12.4052C174.391 12.0302 239.535 10.753 304.576 9.7395"></path>
+                        </svg></span></h2>
+                    <p class="home-faq-summary">Share your goals, timeline and budget. A partner will reply within one business day with clear next steps.</p>
+                  </div>
+                </div>
+                <div class="home-faq-cta-card">
+                  <div class="home-faq-avatars"><img src="/images/arcline-faq-avatar-1.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-2.webp" loading="lazy" alt="" class="home-faq-avatar" /><img src="/images/arcline-faq-avatar-3.webp" loading="lazy" alt="" class="home-faq-avatar" /></div>
+                  <div class="home-faq-cta-text">
+                    <h3 class="home-faq-cta-title">Still have a question?</h3>
+                    <p class="home-faq-cta-summary">Speak directly with a partner. We reply within one business day.</p>
+                  </div>
+                  <Button href="#contact-form">Start a Conversation</Button>
+                </div>
+              </div>
+              <div data-wf--contact-form-card--variant="gray-panel" class="contact-form-card w-variant-8ab1cd09-3711-c76d-0bb5-d7d212ae1770">
+                <ContactForm variant="light" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

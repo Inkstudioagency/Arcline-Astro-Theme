@@ -1,0 +1,28 @@
+---
+import type { Service } from '../../../lib/cms';
+
+interface Props {
+  item: Service;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="section_service-details-overview">
+        <div id="overview" class="service-details-anchor"></div>
+        <div class="container-main">
+          <div class="service-details-overview-grid">
+            <div class="section-eyebrow"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 20 20" height="100%" width="100%" class="section-eyebrow-icon section-eyebrow-icon">
+                <path fill="currentColor" d="M10 0C10.75 6.25 13.75 9.25 20 10C13.75 10.75 10.75 13.75 10 20C9.25 13.75 6.25 10.75 0 10C6.25 9.25 9.25 6.25 10 0Z"></path>
+              </svg>
+              <div class="section-eyebrow-label">Overview</div>
+            </div>
+            <div class="service-details-overview-content">
+              <h2 class="service-details-overview-statement"><span class="service-details-statement-text">{item.statement?.start}</span><span class="service-details-statement-accent"><span class="">{item.statement?.accent}</span><svg viewBox="0 0 161 45" preserveAspectRatio="none" fill="none" aria-hidden="true" class="service-details-statement-circle">
+                    <path d="M99.958 6.48631C105.896 5.67118 111.743 5.141 117.46 5.00743M117.46 5.00743C129.283 4.7312 140.55 6.15128 150.915 10.2553C162.799 14.961 163.625 22.9178 149.81 29.6902C136.434 36.2375 115.45 39.2201 98.4181 41.1673C80.5005 43.2099 62.1537 44.3673 44.9073 43.8948C29.8921 43.4878 12.5195 42.0818 4.38459 36.6073C-1.22454 32.8108 0.613702 27.6049 6.41498 22.918C21.43 10.7958 54.9957 2.66564 82.1299 1.20435C96.7316 0.41798 107.547 1.94585 117.46 5.00743ZM117.46 5.00743C122.292 6.49989 126.91 8.3568 131.647 10.4878" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                  </svg></span><span class="service-details-statement-text">{item.statement?.end}</span></h2>
+              <p class="service-details-overview-text">{item.heroSummary}</p>
+            </div>
+          </div>
+        </div>
+      </section>

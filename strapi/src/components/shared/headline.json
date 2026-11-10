@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_headlines",
+  "info": {
+    "displayName": "Headline",
+    "icon": "heading",
+    "description": "Detail-page title: the lead words, then the words set in the accent style."
+  },
+  "attributes": {
+    "lead": {
+      "type": "string",
+      "required": true
+    },
+    "accent": {
+      "type": "string"
+    }
+  }
+}

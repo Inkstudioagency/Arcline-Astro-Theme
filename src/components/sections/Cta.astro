@@ -1,0 +1,65 @@
+---
+// Closing call-to-action band (Webflow "CTA" component). The globe, lines and dots are animated by IX3.
+import Button from '../ui/Button.astro';
+
+interface Props {
+  secondaryHref?: string;
+  secondaryLabel?: string;
+}
+
+const { secondaryHref = '/services', secondaryLabel = 'Explore Services' } = Astro.props;
+---
+
+<section data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" data-wf-component-id="f2cdb56a-7d0b-3d16-6b13-760b422b817b" data-wf-variant-state="base" class="section_cta">
+          <div aria-hidden="true" class="cta-bg-visual">
+            <div class="cta-bg-stage"><img src="/images/arcline-cta-globe-hq.webp" loading="lazy" sizes="100vw" srcset="/images/arcline-cta-globe-hq-p-500.webp 500w, /images/arcline-cta-globe-hq-p-800.webp 800w, /images/arcline-cta-globe-hq-p-1080.webp 1080w, /images/arcline-cta-globe-hq-p-1600.webp 1600w, /images/arcline-cta-globe-hq-p-2000.webp 2000w, /images/arcline-cta-globe-hq-p-2600.webp 2600w, /images/arcline-cta-globe-hq.webp 2880w" alt="Partial globe composed of small white dots and curved lines on a gradient background transitioning from dark to light blue." class="cta-bg-layer" />
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;c57b0648-c181-62dd-14de-f87fa98c87cc&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-lines-mask"><img src="/images/arcline-cta-lines.svg" loading="lazy" data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;a5e95dce-45f9-bae4-17db-14e553e5a90a&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" alt="Three thin, curved yellow lines of varying lengths resembling gentle waves or arcs." class="cta-bg-layer" /></div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;51447db9-2c57-e47e-dcc6-e2ec2c06f9ca&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot is-1">
+                <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;e9e73d9b-8c75-3cf7-7ed6-319f0a8ad8e6&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot-core"></div>
+              </div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;2954910d-4077-ed16-b12e-a47ff52029ce&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot is-2">
+                <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;6a33fcfe-a509-664c-b1e6-768c25b029f1&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot-core"></div>
+              </div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;ff0073f7-5933-bc01-40c6-19729858285f&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot is-3">
+                <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;dfd50686-0075-fd5d-2bed-70c59728402d&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-dot-core"></div>
+              </div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;9b76f80a-3093-7092-1366-f5b9b9215214&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-chip is-1"><img src="/images/cta-avatar-arlene.webp" loading="lazy" alt="Professional woman with dark hair wearing a light gray blazer and white top, smiling against a muted blue-gray background." class="cta-chip-avatar" />
+                <div class="cta-chip-name">Arlene McCoy</div>
+                <div class="cta-chip-amount">+155.26$</div>
+              </div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;297f7537-384b-006e-1b4d-2ed859b7a8fe&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-chip is-2"><img src="/images/cta-avatar-floyd.webp" loading="lazy" alt="Portrait of a woman with short dark hair and red lipstick wearing a black turtleneck, with a blurred effect creating a ghostly double image on a light blue background." class="cta-chip-avatar" />
+                <div class="cta-chip-name">Floyd Miles</div>
+                <div class="cta-chip-amount">+155.26$</div>
+              </div>
+              <div data-wf-target="[[[&quot;f2cdb56a-7d0b-3d16-6b13-760b422b817b&quot;,&quot;e3c01beb-3d50-3722-ed6a-cea959809a85&quot;],[&quot;1935fbdd-330a-d11f-3c9b-303980f18919&quot;]]]" class="cta-chip is-3"><img src="/images/cta-avatar-guy.webp" loading="lazy" alt="Portrait of a woman with long dark hair wearing a black top, looking slightly to the side against a neutral background." class="cta-chip-avatar" />
+                <div class="cta-chip-name">Guy Hawkins</div>
+                <div class="cta-chip-amount">+155.26$</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-gap">
+            <div class="container-main">
+              <div class="cta-wrapper">
+                <div class="cta-content">
+                  <div class="cta-text-block">
+                    <div class="cta-heading-block">
+                      <h2 class="heading-style-2 cta-heading">Turn Your Next Challenge Into Opportunity</h2>
+                      <div class="cta-heading-line w-embed"><svg width="100%" height="100%" viewBox="0 0 321 16" fill="none" aria-hidden="true" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.492 7.956C101.308 6.327 211.957 3.517 312.447 3.517" stroke="currentColor" stroke-width="2.24" stroke-linecap="round"></path>
+                          <path d="M114.357 12.396C182.854 12.021 251.16 10.745 319.357 9.732" stroke="currentColor" stroke-width="2.24" stroke-linecap="round"></path>
+                        </svg></div>
+                    </div>
+                    <p class="text-size-large cta-summary">Let’s talk about where your business is today, where you want to go, and what it will take to get there.</p>
+                  </div>
+                  <div class="cta-actions">
+                    <div class="button-row">
+                      <Button href="/contact-v1">Start a Conversation</Button>
+                      <Button href={secondaryHref} variant="outline">{secondaryLabel}</Button>
+                    </div>
+                    <div class="cta-note">Free 45-minute consultation · Reply within one business day</div>
+                  </div>
+                </div><img src="/images/arcline-cta-visual.webp" loading="lazy" sizes="100vw" srcset="/images/arcline-cta-visual-p-500.png 500w, /images/arcline-cta-visual-p-800.png 800w, /images/arcline-cta-visual.webp 885w" alt="Globe outline connecting three client cards with their growth results" class="cta-visual" />
+              </div>
+            </div>
+          </div>
+        </section>

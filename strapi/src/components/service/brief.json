@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_service_briefs",
+  "info": {
+    "displayName": "Brief card",
+    "icon": "file",
+    "description": "The small brief card shown on the service hero."
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

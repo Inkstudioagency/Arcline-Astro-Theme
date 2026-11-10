@@ -1,0 +1,136 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "Case Study",
+    "description": "Client stories: /case-studies, home pages, service pages and /case-study/[slug]. Ordered by sortOrder."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "caseNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "industry": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "resultLabel": {
+      "type": "string"
+    },
+    "resultValue": {
+      "type": "string"
+    },
+    "resultChange": {
+      "type": "string"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "featureImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "filterCategory": {
+      "type": "enumeration",
+      "enum": [
+        "Strategy",
+        "Operations",
+        "Finance",
+        "Digital"
+      ],
+      "required": true,
+      "default": "Strategy"
+    },
+    "headline": {
+      "type": "component",
+      "component": "shared.headline",
+      "repeatable": false
+    },
+    "statement": {
+      "type": "component",
+      "component": "shared.statement",
+      "repeatable": false
+    },
+    "intro": {
+      "type": "text"
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionText": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat",
+      "repeatable": true,
+      "max": 3
+    },
+    "collage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "services": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "overviewImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quote": {
+      "type": "component",
+      "component": "shared.quote",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}
